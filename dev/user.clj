@@ -1,15 +1,10 @@
 (ns user
   (:require
-   [clojure.java.io :as io]
-   [io.cvcf.macros.import :as i]))
-
-(def foods (atom nil))
+   [io.cvcf.macros.entrypoint :as e]))
 
 (comment
+  (nth @e/foods 99)
 
-  (->> (or (io/resource "foods.edn")
-           (io/resource "foods.csv"))
-       i/import*
-       (reset! foods))
+  (e/-main "import" "foods.csv" "crap.csv")
 
   ::end)
