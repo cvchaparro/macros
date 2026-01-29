@@ -19,7 +19,7 @@
     "-i"]}
 
   :dev
-  {:extra-paths ["dev"]
+  {:extra-paths ["dev" "dev/resources"]
    :extra-deps
    {binaryage/devtools     {:mvn/version "1.0.7"}
     no.cjohansen/portfolio {:mvn/version "2025.11.2"}}}}}
