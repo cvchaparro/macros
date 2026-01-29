@@ -1,0 +1,1922 @@
+[{:id       #uuid "350c6ac1-5173-4dae-83e5-192a8ad0d586"
+  :title    "MM Elderberry Gummies"
+  :servings {:amount 2.0 :units :gummies}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "cfbc5d74-9229-4302-a26b-1224fecb6223"
+  :title    "MM Adult Multivitamin"
+  :servings {:amount 2.0 :units :gummies}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0af7f2b0-8646-497e-8953-69596e8db433"
+  :title    "Vitafusion Vitamin B12"
+  :servings {:amount 2.0 :units :gummies}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3246860c-e96f-4838-ab3e-847994bef25c"
+  :title    "Vitafusion Vitamin D"
+  :servings {:amount 1.0 :units :gummy}
+  :calories {:amount 5.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "88259c06-78b3-4a40-a9b7-b53bc40852da"
+  :title    "MM Omega 3-6-9 Supplement"
+  :servings {:amount 2.0 :units :soft-gels}
+  :calories {:amount 25.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "baccb03b-c85f-43b0-90dc-26f5528bfae2"
+  :title    "Olive Oil"
+  :servings {:amount 15.0 :units :mL}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 14.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0875261f-1160-4b39-a044-6eaeddd3de46"
+  :title    "Almond Milk"
+  :servings {:amount 240.0 :units :mL}
+  :calories {:amount 30.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6b506d31-9ffb-42c2-bdbe-be2dd0f8a31e"
+  :title    "Nestle Carnation Evaporated Milk"
+  :servings {:amount 30.0 :units :mL}
+  :calories {:amount 40.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "181bbf4a-cc62-4954-b4de-1a73e4df8b9c"
+  :title    "Kerrygold Butter"
+  :servings {:amount 14.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "93350f7f-49d9-4b42-9f30-50a5345bc79e"
+  :title    "Sunflower Seeds"
+  :servings {:amount 2.0 :units :oz}
+  :calories {:amount 360.0 :units :kcal}
+  :protein  {:amount 12.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
+  :fat      {:amount 32.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6d98bccc-7d53-421d-b215-64b742d52353"
+  :title    "Nature's Own Bread"
+  :servings {:amount 1.0 :units :slice}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 12.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "be210b99-9880-4a38-ac07-99adddafe99a"
+  :title    "GV 100% Whole Wheat Bread"
+  :servings {:amount 1.0 :units :slice}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 12.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d18989f0-896d-4a18-9eb6-745ca8bed99c"
+  :title    "Arnold Whole Grain Oatnut Bread"
+  :servings {:amount 1.0 :units :slice}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 21.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3fe07d18-5a35-4a29-a8d4-35f76533c3b3"
+  :title    "Jocko Molk Protein"
+  :servings {:amount 1.0 :units :scoop}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 22.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2624774f-ed92-4b76-afbc-1edbf58d2edc"
+  :title    "Premier Protein Whey Protein Powder"
+  :servings {:amount 39.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9c9814c6-83c4-4595-9654-34dde05db72b"
+  :title    "Muscle Milk Genuine Protein Powder"
+  :servings {:amount 70.0 :units :g}
+  :calories {:amount 270.0 :units :kcal}
+  :protein  {:amount 32.0 :units :g}
+  :carbs    {:amount 20.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4b031f6f-6346-444f-a0ff-e82084107c61"
+  :title    "Ro Tel Original Diced Tomatoes & Green Chiles"
+  :servings {:amount 125.0 :units :g}
+  :calories {:amount 25.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7ec1ddc0-f90c-4e08-8618-4a95cac03926"
+  :title    "Ro Tel Original Diced Tomatoes & Green Chiles"
+  :servings {:amount 1.0 :units :can}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 11.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0840b5fe-0311-47a3-92fe-4309a3113eba"
+  :title    "Starkist Tuna"
+  :servings {:amount 1.0 :units :can}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "41a0aa00-34ed-4a6b-b02c-11cd723418dd"
+  :title    "Bush's Black Beans"
+  :servings {:amount 0.5 :units :cup}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 20.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "23904f8a-7a11-477b-b536-85ac1db5774a"
+  :title    "Squash/Zucchini"
+  :servings {:amount 130.0 :units :g}
+  :calories {:amount 25.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fc9faf71-4374-42b6-80de-7c7da12cee00"
+  :title    "93/7 Ground Beef"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1cff369e-7155-433c-8602-0be26597fa43"
+  :title    "88/12 Ground Beef"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 210.0 :units :kcal}
+  :protein  {:amount 22.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 13.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c48d35d5-b851-4ae6-bae7-93706c43cdbc"
+  :title    "80/20 Ground Beef"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 290.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 22.0 :units :g}
+  :tags     []}
+ {:id       #uuid "41dbd11e-0d46-4f89-aec8-950e16328eb6"
+  :title    "Prime Rib Beef Steak Burger"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 290.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 22.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2d625d59-0410-43db-a517-fe3f85e767ca"
+  :title    "Ball Park Franks"
+  :servings {:amount 53.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9d176fd6-be3b-4b08-94e3-ac09a06b9a64"
+  :title    "Bird's Eye Mixed Vegetables"
+  :servings {:amount 91.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 11.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2def3da1-97c9-474f-a411-3155fb0a520d"
+  :title    "Large Egg"
+  :servings {:amount 1.0 :units :egg}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "aea9d285-cb5b-47ba-808c-fdf369a23ea8"
+  :title    "Heavy Whipping Cream"
+  :servings {:amount 15.0 :units :mL}
+  :calories {:amount 50.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2085d528-48a1-4735-9dc3-62714d96fae7"
+  :title    "Sweet Potato"
+  :servings {:amount 5.0 :units :oz}
+  :calories {:amount 135.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 31.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9749f3a5-2c2e-4504-b380-a1beffd85569"
+  :title    "Medium Banana"
+  :servings {:amount 1.0 :units :banana}
+  :calories {:amount 105.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "63b1e176-ed5d-48c7-bfd2-9f400bf24347"
+  :title    "Medium Pink Lady Apple"
+  :servings {:amount 1.0 :units :apple}
+  :calories {:amount 72.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 19.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c4985e08-5071-47be-b1ec-5227e6ffefaf"
+  :title    "Peanut Butter"
+  :servings {:amount 2.0 :units :tbsp}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 16.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6591e8d6-6958-4fef-ad99-602efd448c40"
+  :title    "MM Roasted Red Pepper Hummus"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "44d1de0b-811c-4a4c-9ccf-0d837fa8bbe6"
+  :title    "Basmati Rice"
+  :servings {:amount 0.25 :units :cup}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 36.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "bc42fb37-6a0e-4ad2-9b7d-73d681ffb14a"
+  :title    "MM Chicken Breast"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 187.0 :units :kcal}
+  :protein  {:amount 35.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0681a242-086a-41a9-ac1e-61c0ad606db5"
+  :title    "MM Chunk Chicken Breast"
+  :servings {:amount 84.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 19.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "a142247d-5df2-49d9-81ef-4783fe0a1821"
+  :title    "Purdue Free Range Chicken Breast"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 25.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "dc17573c-65f3-4fd4-b67e-08c3a1a6c668"
+  :title    "Herdez Salsa Casera"
+  :servings {:amount 31.0 :units :g}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fb6f27ce-2072-4107-91ae-30252ae62999"
+  :title    "GV Picante Sauce"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "41f12c13-2716-4370-af77-ad75788f044a"
+  :title    "Avocado"
+  :servings {:amount 50.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "448948dc-e3e1-4aef-a7ec-c19f5de0cb22"
+  :title    "Vanilla Extract"
+  :servings {:amount 1.0 :units :tsp}
+  :calories {:amount 17.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "73debca8-958a-4650-8c87-61366e2525fd"
+  :title    "GV Plain Greek Yogurt"
+  :servings {:amount 170.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 17.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "15ba870d-5a24-445c-a882-33907d591563"
+  :title    "MM Plain Greek Yogurt"
+  :servings {:amount 170.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 18.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "32655bfb-f362-493c-8ae9-559bf61281a0"
+  :title    "Walmart Lemon Pepper Rotisserie Chicken"
+  :servings {:amount 84.0 :units :g}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 17.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "36a23711-58c8-4262-a15d-18faee60780b"
+  :title    "Smoked Turkey"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 29.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3216475c-5d10-491c-b362-c4eaea8e17b2"
+  :title    "Baby Carrots"
+  :servings {:amount 3.0 :units :oz}
+  :calories {:amount 35.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d7a9a3cc-225f-443c-be13-e01c826a0d4e"
+  :title    "Ritz Crackers"
+  :servings {:amount 5.0 :units :crackers}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7cd35e42-abf2-422c-9c62-4b164f7c3729"
+  :title    "Nabisco Original Premium Saltine Crackers"
+  :servings {:amount 5.0 :units :crackers}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 12.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "727da094-140b-4ed4-80bb-3e5ee651bfdf"
+  :title    "Old Trapper Old Fashioned Beef Jerky"
+  :servings {:amount 1.0 :units :oz}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ab1c8896-74a5-439f-b78b-38a230c054a4"
+  :title    "Peach 2.5\" diameter"
+  :servings {:amount 1.0 :units :peach}
+  :calories {:amount 51.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 13.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d63d6d66-b37f-4b39-b4a8-135b48477620"
+  :title    "Publix Reduced Fat String Cheese"
+  :servings {:amount 1.0 :units :stick}
+  :calories {:amount 50.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d9eef3c0-6d52-4c30-9f8b-c0cec31fc84b"
+  :title    "GV Low-fat String Cheese"
+  :servings {:amount 1.0 :units :stick}
+  :calories {:amount 50.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "518990ee-d3aa-4b77-8443-84529787349f"
+  :title    "Happy Farms Light String Cheese"
+  :servings {:amount 24.0 :units :g}
+  :calories {:amount 50.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "543a3c45-2938-4f72-b50e-43722e64f733"
+  :title    "Frigo Cheese Stick "
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8897a7ce-d00d-4204-87e7-435a28613c98"
+  :title    "Bel Gioioso Salad Blend Freshly Shaved Parmesan Cheese"
+  :servings {:amount 5.0 :units :g}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "78ec65f0-cf8c-4d40-b858-8f197b6b9cb7"
+  :title    "Gigi's Double Chocolate Espresso Sourdough"
+  :servings {:amount 75.0 :units :g}
+  :calories {:amount 230.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 36.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0e22f68a-7c4b-463e-b2e0-1ad2658092d7"
+  :title    "MM Liquid Egg Whites"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 25.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f524c2fe-a1fc-48d8-a75b-a69f23f07847"
+  :title    "GV Liquid Egg Whites"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b6a12ef4-b452-4e62-a5ef-cea0ac58a489"
+  :title    "J's Meats and More Brisket Jerky"
+  :servings {:amount 2.0 :units :oz}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 12.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1734d8e9-bd75-444b-a0e9-603db655e79c"
+  :title    "J's Meats and More Original Jerky"
+  :servings {:amount 1.0 :units :oz}
+  :calories {:amount 35.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "138bbf2c-ea2a-4b7e-bd4e-aead2e5f61f3"
+  :title    "Farmers Market Beef Stick"
+  :servings {:amount 2.5 :units :oz}
+  :calories {:amount 238.0 :units :kcal}
+  :protein  {:amount 18.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 18.0 :units :g}
+  :tags     []}
+ {:id #uuid "619d8be2-88c0-4e6e-ba2a-3df6ff2f9450"
+  :title
+    "Steak n' Shake Triple Steak Burger w/o cheese, w/ pickles, lettuce, tomato, buns"
+  :servings {:amount 1.0 :units :burger}
+  :calories {:amount 610.0 :units :kcal}
+  :protein {:amount 32.0 :units :g}
+  :carbs {:amount 32.0 :units :g}
+  :fat {:amount 38.0 :units :g}
+  :tags []}
+ {:id       #uuid "75804204-e3f6-4c47-86d4-cee3215f1dde"
+  :title    "Steak n' Shake Regular Fries"
+  :servings {:amount 1.0 :units :fry}
+  :calories {:amount 440.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 60.0 :units :g}
+  :fat      {:amount 21.0 :units :g}
+  :tags     []}
+ {:id       #uuid "46b1df07-b0c4-465c-9d49-bc8e660b344f"
+  :title    "Premier Protein Cafe Latte Shake"
+  :servings {:amount 1.0 :units :shake}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "83309f74-0399-41db-af82-213dbf795773"
+  :title    "Premier Protein Pumpkin Spice Shake"
+  :servings {:amount 1.0 :units :shake}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "67c258c3-6cca-4b33-b3fa-dfc6fa94830d"
+  :title    "Premier Protein Chocolate Shake"
+  :servings {:amount 1.0 :units :shake}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "da5dd96f-63d2-4d72-833c-815fa353034e"
+  :title    "Premier Protein Winter Mint Chocolate Shake"
+  :servings {:amount 1.0 :units :shake}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ba682ad6-b878-49c6-a793-f3da36d56396"
+  :title    "Premier Protein White Chocolate Raspberry Shake"
+  :servings {:amount 1.0 :units :shake}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b2e94e3e-0af0-4aa0-829a-a4582b7e7cfa"
+  :title    "Clear American Cherry Limeade Sparkling Water"
+  :servings {:amount 1.0 :units :L}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d651f6f3-58cc-49b4-b95f-569740d72e04"
+  :title    "Clear American Tangerine Mango Sparkling Water"
+  :servings {:amount 1.0 :units :L}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c39c3485-cbfb-479f-9463-a98fd8ca208d"
+  :title    "Kate's Quiche Muffins"
+  :servings {:amount 62.0 :units :g}
+  :calories {:amount 36.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "650ac665-f87a-4567-9cf7-cc38eee69e57"
+  :title    "Kate's Meat, Potatoes, and Squash Meal"
+  :servings {:amount 305.0 :units :g}
+  :calories {:amount 341.0 :units :kcal}
+  :protein  {:amount 25.0 :units :g}
+  :carbs    {:amount 35.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2b0067ca-fd95-44f0-9482-e8b2230919bc"
+  :title    "Kate's Chicken Noodle Soup"
+  :servings {:amount 168.0 :units :g}
+  :calories {:amount 280.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 13.0 :units :g}
+  :fat      {:amount 16.0 :units :g}
+  :tags     []}
+ {:id       #uuid "5c1dc9b0-6c6f-4c10-be77-9e07ed908f28"
+  :title    "Kate's Salmon and Bean Bowl"
+  :servings {:amount 1.0 :units :serving}
+  :calories {:amount 377.0 :units :kcal}
+  :protein  {:amount 32.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 15.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6ccec431-af74-4e56-9d03-12e139de52b7"
+  :title    "Kate's Bread"
+  :servings {:amount 50.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 21.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fa39e0c4-4faf-4542-bff2-5bd4d2c4230a"
+  :title    "Kate's Pumpkin Soup"
+  :servings {:amount 288.0 :units :mL}
+  :calories {:amount 163.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6b4c74e0-1162-4101-bce9-6e4d7902c294"
+  :title    "Kate's Chicken and Mushroom"
+  :servings {:amount 1.0 :units :serving}
+  :calories {:amount 569.0 :units :kcal}
+  :protein  {:amount 79.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 26.0 :units :g}
+  :tags     []}
+ {:id       #uuid "69d51df5-02fe-44a2-823f-ab88618f00dd"
+  :title    "Kate's Rice and Tuna Bowl"
+  :servings {:amount 370.0 :units :g}
+  :calories {:amount 299.0 :units :kcal}
+  :protein  {:amount 15.0 :units :g}
+  :carbs    {:amount 58.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "62088565-020d-4770-8b8f-c6c771eb85aa"
+  :title    "Kate's Chicken Fajitas"
+  :servings {:amount 305.0 :units :g}
+  :calories {:amount 292.0 :units :kcal}
+  :protein  {:amount 42.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4096f819-7477-4dbb-9050-e48bbdb69142"
+  :title    "Kate's Beef & Veg Bowl"
+  :servings {:amount 384.0 :units :g}
+  :calories {:amount 272.0 :units :kcal}
+  :protein  {:amount 25.0 :units :g}
+  :carbs    {:amount 9.0 :units :g}
+  :fat      {:amount 16.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c18af934-ce37-4a7a-817b-eb82ba0402ea"
+  :title    "Kate's Pumpkin Banana Bread"
+  :servings {:amount 103.0 :units :g}
+  :calories {:amount 166.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f2ee7f3a-22d0-4309-baa3-a2fb43b8f213"
+  :title    "Kate's Chili"
+  :servings {:amount 200.0 :units :g}
+  :calories {:amount 380.0 :units :kcal}
+  :protein  {:amount 33.0 :units :g}
+  :carbs    {:amount 40.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "77aed04b-8259-47ff-a22d-5f25542769b1"
+  :title    "Kate's Chili"
+  :servings {:amount 300.0 :units :g}
+  :calories {:amount 354.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
+  :fat      {:amount 25.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7022d388-f14e-423b-ad69-cb6ef23670bf"
+  :title    "Kate's Chili"
+  :servings {:amount 350.0 :units :g}
+  :calories {:amount 370.0 :units :kcal}
+  :protein  {:amount 35.0 :units :g}
+  :carbs    {:amount 11.0 :units :g}
+  :fat      {:amount 20.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ef857b56-6561-464f-bad1-adbeddb3acfa"
+  :title    "Kate's Chili 2"
+  :servings {:amount 400.0 :units :g}
+  :calories {:amount 305.0 :units :kcal}
+  :protein  {:amount 38.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
+  :fat      {:amount 12.0 :units :g}
+  :tags     []}
+ {:id       #uuid "dbeb99a6-89bd-4daf-bd33-21391b491d06"
+  :title    "Kate's Chili 2 w/ Beans"
+  :servings {:amount 400.0 :units :g}
+  :calories {:amount 405.0 :units :kcal}
+  :protein  {:amount 44.0 :units :g}
+  :carbs    {:amount 29.0 :units :g}
+  :fat      {:amount 13.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1d09e9d6-36d9-4483-bf1f-88c16caf06ba"
+  :title    "Kate's Chicken Southwest Soup"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 96.0 :units :kcal}
+  :protein  {:amount 13.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1cbeb751-d80f-4283-813c-07abb78750b0"
+  :title    "Picadillo"
+  :servings {:amount 200.0 :units :g}
+  :calories {:amount 255.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 14.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f035558f-8b98-45a0-87c4-0058467ff672"
+  :title    "Sunsweet Amazin Prune Juice"
+  :servings {:amount 240.0 :units :mL}
+  :calories {:amount 180.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 44.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "82f9c4d0-afb6-4c86-be3a-1d15959413b0"
+  :title    "Zucchini"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f154cbf1-07b5-4b67-bfaa-8fbd042bdd15"
+  :title    "Bell Pepper"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 31.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6baded0c-0952-44b4-83ec-b14a0bf4697c"
+  :title    "Old Fashioned Quaker Oats"
+  :servings {:amount 40.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1c6991a3-9831-49b6-895b-157ed740e2e6"
+  :title    "MM Mixed Berries"
+  :servings {:amount 140.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 20.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7bf694b5-22c2-4183-81b8-d2f7bb943d0b"
+  :title    "GV Mixed Berry Cherry Blend"
+  :servings {:amount 145.0 :units :g}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 17.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "df07201b-09a8-42c7-85ae-e9e80d3bdc18"
+  :title    "Tuna Salad"
+  :servings {:amount nil :units :of-a-batch}
+  :calories {:amount 85.0 :units :kcal}
+  :protein  {:amount 17.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1ab49137-4595-4f95-a92d-6284850aeb39"
+  :title    "Mushrooms"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9119cffa-68ed-45fc-89dd-0bbec8c84eb5"
+  :title    "Spinach"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 25.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b6bb470d-895c-4be7-95b7-84024a40c48e"
+  :title    "Bird's Eye Broccoli Florets"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 30.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1c10c7d9-6ba9-4d08-9555-22688183ce65"
+  :title    "Taylor Farms Broccoli Florets"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 35.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "5122b1c7-d797-4cb4-aa41-fbb98bcc4fbe"
+  :title    "Stevia"
+  :servings {:amount 2.0 :units :g}
+  :calories {:amount 0.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "26b56032-5936-4840-bbb8-f7ec5f937b49"
+  :title    "GV Original Beef Jerky"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 10.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "85af9549-91c2-4e75-a122-b1a3e93e1d54"
+  :title    "Jack Links Original Beef Jerky"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0748ac51-510b-4c6e-9369-20672e555b71"
+  :title    "Jack Links Teriyaki Beef Jerky"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 10.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8a5fd15a-b4c9-4d99-9337-39d6c6f561c2"
+  :title    "Jack Link's Beef Sticks Original"
+  :servings {:amount 26.0 :units :g}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "df1a020b-d542-4383-8630-036264f1aefe"
+  :title    "Jack Links Mini Turkey Sticks"
+  :servings {:amount 14.0 :units :g}
+  :calories {:amount 35.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3e12912c-7fdd-4363-b869-a95769b90544"
+  :title    "Jack Link's Beef Steaks"
+  :servings {:amount 23.0 :units :g}
+  :calories {:amount 50.0 :units :kcal}
+  :protein  {:amount 9.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ef3bf16a-a252-48d4-9278-fca5985beee4"
+  :title    "Duke's Hatch Green Chile Smoked Shorty Sausages"
+  :servings {:amount 2.0 :units :links}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f485190c-5f4e-40a9-bc35-15951855725a"
+  :title    "Duke's Hatch Hot & Spicy Smoked Shorty Sausages"
+  :servings {:amount 2.0 :units :links}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "cfb98c28-f74c-4091-8e9f-ee9082cfeb8f"
+  :title    "MM Jalapeño Beef Sticks"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 9.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "15d2d1c8-7dd1-4b43-a4b6-566431e528f0"
+  :title    "MM Steak Strips Beef Snacks"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 9.0 :units :g}
+  :carbs    {:amount 6.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f4ec7f21-3221-4f01-b134-72bdd08d525d"
+  :title    "Fairlife Protein Shake"
+  :servings {:amount 1.0 :units :bottle}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 30.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d7f48f6a-432d-40c4-92a3-431e9d7156ad"
+  :title    "Fairlife Core Power Protein Shake"
+  :servings {:amount 1.0 :units :bottle}
+  :calories {:amount 230.0 :units :kcal}
+  :protein  {:amount 42.0 :units :g}
+  :carbs    {:amount 9.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4129580d-cde9-47b0-9fbc-db5dda2cd550"
+  :title    "Bizzy Cold Brew Espresso Blend"
+  :servings {:amount 12.0 :units :oz}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8835cd79-d3ac-454f-99c3-d7c5ca0fe695"
+  :title    "Seeds of Change Organic Quinoa & Brown Rice w/ Garlic"
+  :servings {:amount 142.0 :units :g}
+  :calories {:amount 240.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 47.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8340da55-2d81-4d82-92dc-ce83372aa503"
+  :title    "Kodiak Protein Pancakes"
+  :servings {:amount 53.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 14.0 :units :g}
+  :carbs    {:amount 30.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ba3d30aa-8e0f-415c-b5de-4a337fb71407"
+  :title    "Kodiak Extra Protein Pancakes"
+  :servings {:amount 53.0 :units :g-powder}
+  :calories {:amount 282.5 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 31.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "94d9bed0-e2c3-4da1-8719-5f35b14276e5"
+  :title    "Smuckers Natural Chunky Peanut Butter"
+  :servings {:amount 32.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 8.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 16.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8e9a28b2-1ea8-4313-bbc9-6b3d89fb9dbf"
+  :title    "Smuckers Natural Creamy Peanut Butter"
+  :servings {:amount 32.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 8.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 16.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e62f00f5-936f-4206-903b-54adfb98ca6e"
+  :title    "Smuckers Sugar Free Red Raspberry Preserves"
+  :servings {:amount 17.0 :units :g}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fd0c1951-e054-45bc-b392-1a2cedc0ac82"
+  :title    "MM Smoked Atlantic Salmon"
+  :servings {:amount 56.0 :units :g}
+  :calories {:amount 140.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "5998e6b0-bf31-415f-980d-716619f8ea3b"
+  :title    "MM Farm-Raised Skinless Atlantic Salmon"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 240.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 15.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8affab48-dbd6-471d-87de-e3df2fa240b6"
+  :title    "MM Tilapia Fillet"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "965ddb4c-c760-4b97-922b-95e6cfd29e1b"
+  :title    "Marifano Pitted Greek Olives"
+  :servings {:amount 3.0 :units :olives}
+  :calories {:amount 30.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c93e85db-fb53-4145-bdb4-88c1fd7e4179"
+  :title    "MM Chicken Broth"
+  :servings {:amount 240.0 :units :mL}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "43c59584-bea8-4312-a5de-a12f104de48b"
+  :title    "MM Beef Broth"
+  :servings {:amount 240.0 :units :mL}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "82a69197-95da-40c3-853c-41c930a97741"
+  :title    "Hunn's Jumbo Dill Pickles"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 0.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "351b500e-04c0-4180-82f2-1c5723b2388e"
+  :title    "Panda Express Teriyaki Chicken"
+  :servings {:amount 6.0 :units :oz}
+  :calories {:amount 275.0 :units :kcal}
+  :protein  {:amount 33.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "de1d61b6-3b27-42df-9ac7-31f9f1cfad4c"
+  :title    "Panda Express Super Greens"
+  :servings {:amount 10.0 :units :oz}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 9.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e68746ba-5fa4-4dc0-be45-03ec9556e2ae"
+  :title    "Red Onion"
+  :servings {:amount 197.0 :units :g}
+  :calories {:amount 87.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 20.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "46d48c1f-8e1a-4baf-92d9-b0f6811556d8"
+  :title    "Stone Ground Mustard"
+  :servings {:amount 5.0 :units :g}
+  :calories {:amount 5.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "52ceeeac-8535-4b7f-a7ee-5d9b1de21b3e"
+  :title    "MM Fried Pork Rinds"
+  :servings {:amount 14.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 8.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8f0d0cdc-ec3d-42be-8d9f-abda6b0fe893"
+  :title    "MM Dark Chocolate Chips"
+  :servings {:amount 15.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 9.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "11a38ea2-1c55-41f9-acc2-76cf3c9e5f07"
+  :title    "MM Whipped Topping"
+  :servings {:amount 5.0 :units :g}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f8d4623f-59e8-439a-b5c9-48630540457c"
+  :title    "Legendary Foods Chocolate Protein Sweet Roll"
+  :servings {:amount 1.0 :units :roll}
+  :calories {:amount 220.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 12.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2852ebe1-fd50-4b6b-8984-0876fe7802bd"
+  :title    "Plantain Chips"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6272a586-9862-45fc-ba7d-bcc18c67b85b"
+  :title    "Season Sardine Fillets in 100% Olive Oil"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 200.0 :units :kcal}
+  :protein  {:amount 22.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 12.0 :units :g}
+  :tags     []}
+ {:id       #uuid "6ad6f186-c705-436a-b255-0e467f7775e1"
+  :title    "Beach Cliff Sardines in Louisiana Hot Sauce"
+  :servings {:amount 106.0 :units :g}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 14.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "5258d064-1fc1-423e-b19e-c2a4d11c907e"
+  :title    "Beach Cliff Sardines in Mustard Sauce"
+  :servings {:amount 106.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 13.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3261373a-ddae-4c8b-a01b-0eb5c3c9a0d4"
+  :title    "Sprouts Unseasoned Rotisserie Chicken"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 180.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 13.0 :units :g}
+  :tags     []}
+ {:id       #uuid "230a0ebf-6a76-48be-b18f-db049d13fa1e"
+  :title    "Romain Lettuce"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 17.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7a0338bb-e2ac-4ce7-be22-8bb9da43675e"
+  :title    "Blue Bell No Sugar Added Reduced Fat Country Vanilla Ice Cream"
+  :servings {:amount 99.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "beeededf-5e4f-4c31-b6c4-0a574ff0a2f3"
+  :title    "Chick-fil-A 30 piece Grilled Nuggets"
+  :servings {:amount 1.0 :units :serving}
+  :calories {:amount 510.0 :units :kcal}
+  :protein  {:amount 98.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2e4551c1-4a80-4ff5-8c4b-5c37dac1cf7b"
+  :title    "Fit Crunch Mint Chocolate Chip Protein Bar"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 16.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fe7c304b-fbdc-4986-a218-79d3a75ebb60"
+  :title    "Fit Crunch Strawberry Strudel Protein Bar"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ca22fb38-b41d-4b85-b169-9f5e74e5b765"
+  :title    "Fit Crunch Chocolate Peanut Butter Protein Bar"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0e610bcc-8789-4451-b4fa-64bf6a6a816d"
+  :title    "Fit Crunch Chocolate Chip Cookie Dough Protein Bar"
+  :servings {:amount 46.0 :units :g}
+  :calories {:amount 210.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 16.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "78625c06-e5d3-4ead-804d-08060d91b55b"
+  :title    "Pure Protein Chocolate Deluxe"
+  :servings {:amount 1.0 :units :bar}
+  :calories {:amount 180.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 17.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3e035e3f-e790-40f3-af5a-9a3843899638"
+  :title    "Pure Protein Chocolate Peanut Butter"
+  :servings {:amount 1.0 :units :bar}
+  :calories {:amount 200.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 17.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "422950db-c673-4acb-a35d-4d0231bfff4c"
+  :title    "Pure Protein Chocolate Peanut Caramel"
+  :servings {:amount 1.0 :units :bar}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 16.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "487422d8-f63b-41e3-9f82-d3a5904b0483"
+  :title    "Clif Builders Protein Oreo Flavored"
+  :servings {:amount 1.0 :units :bar}
+  :calories {:amount 280.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 31.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4750c3e4-5872-408c-b612-cbe8507a81b7"
+  :title    "Quest Protein Bar Chocolate Chip Cookie Dough"
+  :servings {:amount 60.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 22.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "54889c7f-ea8a-4f8b-8a11-17b0b98720f5"
+  :title    "Quest Protein Bar Cookies & Cream"
+  :servings {:amount 60.0 :units :g}
+  :calories {:amount 190.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 22.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "93b6aa2c-0a42-4de2-8249-5366b340c396"
+  :title    "Quest Protein Bar Chocolate Brownie"
+  :servings {:amount 60.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9209558b-a6cc-4fde-bd3c-dc2cfebb8887"
+  :title    "Quest Peanut Butter Cups"
+  :servings {:amount 2.0 :units :cups}
+  :calories {:amount 200.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 13.0 :units :g}
+  :fat      {:amount 15.0 :units :g}
+  :tags     []}
+ {:id       #uuid "adfd11f7-0d35-409e-83c7-571452c314c9"
+  :title    "Meat District Hatch Chile Pepper Jack 1/4lb Beef Patty"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 280.0 :units :kcal}
+  :protein  {:amount 17.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 22.0 :units :g}
+  :tags     []}
+ {:id       #uuid "936d7789-b2cb-4c18-b81a-0d9936adb188"
+  :title    "GV Honey Graham Crackers"
+  :servings {:amount 31.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fccaeea4-fba3-4ee2-a03c-0afc0e347652"
+  :title    "GV Rice Crisps Cereal"
+  :servings {:amount 41.0 :units :g}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 36.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e6008d33-2068-4b6b-8b46-1297267b0422"
+  :title    "MM Everything Seasoned Cashews"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
+  :fat      {:amount 12.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0647e255-a072-4eb2-9a10-b8af0eeedc09"
+  :title    "Nissin Top Ramen Chicken Flavor"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 380.0 :units :kcal}
+  :protein  {:amount 9.0 :units :g}
+  :carbs    {:amount 53.0 :units :g}
+  :fat      {:amount 14.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ebd946e1-579b-4336-9795-1963416751a9"
+  :title    "Progresso Chicken Noodle Soup"
+  :servings {:amount 538.0 :units :g}
+  :calories {:amount 230.0 :units :kcal}
+  :protein  {:amount 15.0 :units :g}
+  :carbs    {:amount 28.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "f7161cc8-5c36-407d-9bae-2c60a9d3d6e1"
+  :title    "Giorgio Mushroom Pieces & Stems"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 30.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c46f3523-c0ca-4df7-bc7c-d23efe2999fd"
+  :title    "St. Joseph's Bread"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 226.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 39.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "77e9f819-4145-466e-a4a2-1b434dd7965f"
+  :title    "MM All Butter Sandwich Croissant"
+  :servings {:amount 1.0 :units :croissant}
+  :calories {:amount 320.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 33.0 :units :g}
+  :fat      {:amount 18.0 :units :g}
+  :tags     []}
+ {:id       #uuid "445ec34a-f817-4811-b12e-81a3842fbe9a"
+  :title    "Idahoan Shredded Hash Brown Potatoes"
+  :servings {:amount 16.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 13.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0e2e12e2-ca63-41c3-a79b-1a22d8df6edb"
+  :title    "LMNT Electrolyte Drink Mix"
+  :servings {:amount 1.0 :units :packet}
+  :calories {:amount 5.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "22abd36e-1484-4fe9-9115-34c556f3f77d"
+  :title    "LiquidIV Strawberry Watermelon Electrolyte Drink Mix"
+  :servings {:amount 1.0 :units :packet}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7fd944ab-54fc-414b-9606-baf1595e6c8c"
+  :title    "LiquidIV White Peach Electrolyte Drink Mix"
+  :servings {:amount 1.0 :units :packet}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4894df29-fc9f-4d6e-bc1d-c78cdfe7a7ea"
+  :title    "True lemon Original Lemonade Powder"
+  :servings {:amount 3.0 :units :g}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "09d23884-c3eb-47b6-9a54-4c6c93d08dec"
+  :title    "True lime Black Cherry Limeade Powder"
+  :servings {:amount 3.0 :units :g}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8cd17e60-5412-4410-90d5-9dc96d1fa38f"
+  :title    "MM Unsalted Deluxe Mixed Nuts"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 7.0 :units :g}
+  :fat      {:amount 15.0 :units :g}
+  :tags     []}
+ {:id       #uuid "849867c0-3954-44ab-adb0-60ebe075397b"
+  :title    "MM Double Smoked Thick Cut Bacon"
+  :servings {:amount 18.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 8.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d0ca2bc8-c588-472b-8329-5dca766ab47c"
+  :title    "Wright Applewood Thick Cut Bacon"
+  :servings {:amount 14.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0d8ac190-a996-44dc-8b0d-cbe2aab9530a"
+  :title    "Wellsley Farms Premium Bacon"
+  :servings {:amount 17.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "745d7c6f-9eb7-42fd-a02b-351a0b4e6194"
+  :title    "Four Sigmatic Focus Organic Coffee"
+  :servings {:amount 1.0 :units :packet}
+  :calories {:amount 10.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7e3528ad-0b03-42f8-89fe-9d0a6e84ec87"
+  :title    "Ten Mushroom Coffee"
+  :servings {:amount 1.0 :units :tsp}
+  :calories {:amount 6.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4740f95c-1d74-40e7-be8c-89fbf027557e"
+  :title    "Salmon Patty"
+  :servings {:amount 111.0 :units :g}
+  :calories {:amount 169.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "fcba7ff0-6b9c-4a04-b4de-8a806a61d2e1"
+  :title    "MM Top Sirloin Steak"
+  :servings {:amount 113.0 :units :g}
+  :calories {:amount 240.0 :units :kcal}
+  :protein  {:amount 33.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 11.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0e1659de-8926-46c6-9788-8480154c9689"
+  :title    "A1 Original Sauce"
+  :servings {:amount 17.0 :units :g}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "db453d38-317a-48f9-820b-500ffa13f5c5"
+  :title    "MM Jalapeno and Garlic Hand Stuffed Greek Olives"
+  :servings {:amount 15.0 :units :g}
+  :calories {:amount 20.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "67cc5aa8-fc46-4927-959c-efc418aa8e79"
+  :title    "Red Lobster Cheddar Bay Biscuit"
+  :servings {:amount 32.0 :units :g}
+  :calories {:amount 140.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 19.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "d0fbe309-30c4-42f8-99e3-721ddce32b2c"
+  :title    "Aldi Sourdough Round Bread"
+  :servings {:amount 56.0 :units :g}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 25.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0937d9bb-f8c5-4455-b560-9769376d3196"
+  :title    "The Rustik Oven Italian Bread"
+  :servings {:amount 65.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 33.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e8401f9d-63ae-4a29-8d43-ff019044f314"
+  :title    "Aldi Thick Cut Applewood Bacon"
+  :servings {:amount 12.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e1d82fdd-720d-4a5e-bc6f-5fbbfac30844"
+  :title    "Happy Farms Sharp Cheddar Deli-Sliced Cheese"
+  :servings {:amount 1.0 :units :slice}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "77fc4a33-33ca-4c89-8c9a-2d8acf0e1a0a"
+  :title    "Aldi Deli-Sliced Buffalo Style Chicken Breast"
+  :servings {:amount 56.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2a59abe5-ac01-496a-98d7-f57e6f0cd029"
+  :title    "Aldi Deli-Sliced Genoa Salami"
+  :servings {:amount 56.0 :units :g}
+  :calories {:amount 180.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 1.0 :units :g}
+  :fat      {:amount 14.0 :units :g}
+  :tags     []}
+ {:id       #uuid "575e4dbf-7553-4c52-b03e-33a87dd6aeac"
+  :title    "Aldi Park Street Deli Sirloin Steak Tips with Rojo Sauce"
+  :servings {:amount 140.0 :units :g}
+  :calories {:amount 140.0 :units :kcal}
+  :protein  {:amount 21.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "bd973a13-7925-441f-b92d-3417ebae6010"
+  :title    "Aldi Park Street Deli Artichoke Stuffed Chicken"
+  :servings {:amount 140.0 :units :g}
+  :calories {:amount 200.0 :units :kcal}
+  :protein  {:amount 27.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9701bad1-708b-44ab-880d-d0e0e7a70ed4"
+  :title    "GV Mild Cheddar Shredded Cheese"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 7.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 9.0 :units :g}
+  :tags     []}
+ {:id       #uuid "264083af-ee0c-4711-8676-59c4365b0730"
+  :title    "GV Swiss Cheese Slice"
+  :servings {:amount 19.0 :units :g}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0f433a87-d1f0-4325-b3a4-e6d817675f98"
+  :title    "MM Mild Cheddar Cheese Slices"
+  :servings {:amount 22.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "4f79ac26-f3e1-40fe-97cb-b24a8774ac93"
+  :title    "Jimmy Dean Delights Egg'wich"
+  :servings {:amount 1.0 :units :sandwich}
+  :calories {:amount 260.0 :units :kcal}
+  :protein  {:amount 15.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 19.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1a5949da-65f1-4622-a519-022adc2e4646"
+  :title    "Healthy Choice Protein Bowl Spicy Black Bean and Chicken"
+  :servings {:amount 1.0 :units :meal}
+  :calories {:amount 210.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 19.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1a2cd503-a3fd-4a6a-bda3-1dc0912a3c0e"
+  :title    "Healthy Choice Café Steamers General Tso's Spicy Chicken"
+  :servings {:amount 1.0 :units :meal}
+  :calories {:amount 290.0 :units :kcal}
+  :protein  {:amount 16.0 :units :g}
+  :carbs    {:amount 47.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "934ac617-292d-4ede-832b-a92bd0b336f4"
+  :title    "Real Good Chicken Strips"
+  :servings {:amount 112.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 23.0 :units :g}
+  :carbs    {:amount 4.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "ca27c247-5052-4b4a-901f-84f9aed03abd"
+  :title    "Just Bare Lightly Breaded Chicken Strips"
+  :servings {:amount 93.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 17.0 :units :g}
+  :carbs    {:amount 11.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c9bb0c2b-f42d-4cd2-a904-c15fa9751881"
+  :title    "GV Seasoned French Fried Potatoes"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 23.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "30ab1708-39cb-4a0f-b08f-fdecac768d40"
+  :title    "GV Sweet Potatoe Fries"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 22.0 :units :g}
+  :fat      {:amount 4.0 :units :g}
+  :tags     []}
+ {:id       #uuid "459f60fd-7f80-4b42-be32-ad6be3661814"
+  :title    "McCain Garlic & Herb Crinkle Fries"
+  :servings {:amount 85.0 :units :g}
+  :calories {:amount 140.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 21.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "901ab49f-2d08-4f6f-8dd8-68ffff1e1afa"
+  :title    "Wilde Protein Chips Buffalo Style Crispy Chips"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 10.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 10.0 :units :g}
+  :tags     []}
+ {:id       #uuid "701eaeeb-90df-4ae6-906b-73aaf7e6d176"
+  :title    "Nutty & Fruity Chili Mango"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "a20c2cd9-c049-43ca-a574-738e8c08103f"
+  :title    "Nutty & Fruity Chili Tamarind Bites"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "9b453649-c815-4aa1-827a-fab019527e8e"
+  :title    "On the Border Cafe Style Tortilla Chips"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 17.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "641d6712-916e-4a59-80cf-2413a5dfdef1"
+  :title    "On the Border Monterrey Jack Queso"
+  :servings {:amount 34.0 :units :g}
+  :calories {:amount 45.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 3.0 :units :g}
+  :tags     []}
+ {:id       #uuid "c4a7ed93-c1f1-49a8-88e4-cd0e6fd5cd84"
+  :title    "Pillars Drinkable Greek Yogurt Peach"
+  :servings {:amount 355.0 :units :mL}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 20.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8e61cabe-c5fe-40bc-8e9b-16151584c78b"
+  :title    "Raw Strawberry"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 32.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 8.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1ee19f2d-0565-44bf-8a06-ea2407d92bc4"
+  :title    "MM Rising Crust Four Cheese Pizza"
+  :servings {:amount 138.0 :units :g}
+  :calories {:amount 330.0 :units :kcal}
+  :protein  {:amount 13.0 :units :g}
+  :carbs    {:amount 42.0 :units :g}
+  :fat      {:amount 12.0 :units :g}
+  :tags     []}
+ {:id       #uuid "07da3091-0db3-434e-b3b6-5c943e317642"
+  :title    "Thomas' Swirl Cinnamon Raisin Bread"
+  :servings {:amount 32.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "cc9a5c01-bc9e-458f-a24b-f2f2bc118c5c"
+  :title    "Jolly Rancher Gummies Tropical"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 100.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "5c6c2f42-267c-44bb-94de-23b1a05d866f"
+  :title    "Jolly Rancher Sour Gummies Awesome Reds"
+  :servings {:amount 32.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8934b178-923d-4b0d-b968-272b9e4a7bb2"
+  :title    "Jolly Rancher Chewy Poppers"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 26.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b79a0dca-62ce-4322-99eb-f90a65addeda"
+  :title    "GV Marshmallows"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 23.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b1d6c6b0-41a9-47df-932b-799ffa48b714"
+  :title    "Hershey's Milk Chocolate Snack Size Bar"
+  :servings {:amount 26.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 16.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "2fb429c1-ea2f-44bc-b0d5-992ddebfba5c"
+  :title    "S'Mores"
+  :servings {:amount 1.0 :units :piece}
+  :calories {:amount 152.5 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 25.75 :units :g}
+  :fat      {:amount 5.5 :units :g}
+  :tags     []}
+ {:id       #uuid "7a2ab071-654f-4be4-95c9-1ed56198beb3"
+  :title    "Popcorn Indiana Black & White Fudge Drizzle"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 140.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 7.0 :units :g}
+  :tags     []}
+ {:id       #uuid "882cae17-2a73-4d91-ae9e-d7111bb611bf"
+  :title    "LifeSavers Mints Pep O Mint"
+  :servings {:amount 1.0 :units :mint}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "b56b3bb4-76a2-48a3-b8ed-b2181e8c75ab"
+  :title    "Peelerz Gummy Peach"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 26.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "598e94de-9c96-46bd-b603-bfea518e26c4"
+  :title    "Original Lemonheads"
+  :servings {:amount 15.0 :units :g}
+  :calories {:amount 60.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 14.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "3c7323c9-88b0-4f0a-adf6-bace9bbf0820"
+  :title    "Nerds Mini box"
+  :servings {:amount 1.0 :units :box}
+  :calories {:amount 45.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 11.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1cbd8212-6072-4d45-a119-ea9a031eb476"
+  :title    "Angie's Boom Chicka Pop Mango Habanero Popcorn"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "873dc011-4e77-47f5-8f8e-342206c06332"
+  :title    "MM Animal Crackers"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 120.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 24.0 :units :g}
+  :fat      {:amount 2.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7707bb70-01d2-4053-bdc5-c20536439d27"
+  :title    "GV Chocolate Ice Cream"
+  :servings {:amount 87.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 23.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "8a8c3a94-0d95-473c-9048-40a404a5fc74"
+  :title    "International Delight French Vanilla Creamer Single"
+  :servings {:amount 13.0 :units :mL}
+  :calories {:amount 30.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 5.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id       #uuid "e5dfe30b-4dfb-4180-8c96-2e433261fa7a"
+  :title    "Marketside Pumpkin Iced Cake"
+  :servings {:amount 1.0 :units :slice}
+  :calories {:amount 160.0 :units :kcal}
+  :protein  {:amount 2.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "19eaa74d-87ed-48a9-b569-a4e710a79103"
+  :title    "Pumpkin Poke Cake"
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 193.0 :units :kcal}
+  :protein  {:amount 1.4 :units :g}
+  :carbs    {:amount 37.4 :units :g}
+  :fat      {:amount 3.9 :units :g}
+  :tags     []}
+ {:id       #uuid "b405a0d9-d3ad-4221-a097-7acef0b529a2"
+  :title    "Aldi Bake Shop Cinnamon Rolls"
+  :servings {:amount 1.0 :units :roll}
+  :calories {:amount 260.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 48.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "a85a3403-517e-4467-ba2e-fa601c308c97"
+  :title    "Kitchen Sink Cookie"
+  :servings {:amount 80.0 :units :g}
+  :calories {:amount 334.0 :units :kcal}
+  :protein  {:amount 3.7 :units :g}
+  :carbs    {:amount 49.0 :units :g}
+  :fat      {:amount 13.5 :units :g}
+  :tags     []}
+ {:id       #uuid "d56f7c59-58cc-43cd-8a63-d185a15ba223"
+  :title    "Cheezits"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 17.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "0246d91c-b49e-439b-adb5-4345d273e9b0"
+  :title    "Cheez-it Snack Mix Double Cheese"
+  :servings {:amount 28.0 :units :g}
+  :calories {:amount 130.0 :units :kcal}
+  :protein  {:amount 3.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 6.0 :units :g}
+  :tags     []}
+ {:id       #uuid "7e66ee4c-43b0-4fd1-b34c-f81c1c53f4eb"
+  :title    "Sunbelt Bakery Fudge Dipped Coconut"
+  :servings {:amount 1.0 :units :bar}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "bee06e04-58da-4658-9d0f-09455c1b44d5"
+  :title    "Stok Could Brew Coffee Peppermint Mocha Creamed"
+  :servings {:amount 360.0 :units :mL}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 5.0 :units :g}
+  :carbs    {:amount 23.0 :units :g}
+  :fat      {:amount 3.5 :units :g}
+  :tags     []}
+ {:id       #uuid "320c7902-b6ca-4075-b9fd-00e28df0f69a"
+  :title    "Heath English Toffee Bits"
+  :servings {:amount 15.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 9.0 :units :g}
+  :fat      {:amount 5.0 :units :g}
+  :tags     []}
+ {:id       #uuid "338577f1-5e50-45e5-be77-3a926c627292"
+  :title    "Betty Crocker Sugar Cookie"
+  :servings {:amount 1.0 :units :cookie}
+  :calories {:amount 110.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 16.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     []}
+ {:id #uuid "2da89391-4273-4835-a197-5b0fb548220d"
+  :title
+    "Boulder Canyon Avocado Oil Malt Vinegar & Sea Salt Kettle Style Potato Chips"
+  :servings {:amount 28.3 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein {:amount 2.0 :units :g}
+  :carbs {:amount 16.0 :units :g}
+  :fat {:amount 8.0 :units :g}
+  :tags []}
+ {:id #uuid "2ac4c772-7d84-4ad3-be0b-6b09b50f0abe"
+  :title "Boulder Canyon Avocado Oil Classic Sea Salt Kettle Style Potato Chips"
+  :servings {:amount 28.3 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein {:amount 3.0 :units :g}
+  :carbs {:amount 16.0 :units :g}
+  :fat {:amount 9.0 :units :g}
+  :tags []}
+ {:id       #uuid "f319d7f8-f7bc-402f-ab87-28e645d8fa54"
+  :title    "L'oven Fresh Gingerbread Breakfast Bread"
+  :servings {:amount 47.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 4.0 :units :g}
+  :carbs    {:amount 27.0 :units :g}
+  :fat      {:amount 3.5 :units :g}
+  :tags     []}
+ {:id       #uuid "a4517a84-f7bb-4ba4-b37e-d7b9564688a1"
+  :title    "Nature's Garden Probiotic Mixed Berry Yoggies"
+  :servings {:amount 20.0 :units :g}
+  :calories {:amount 80.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 15.0 :units :g}
+  :fat      {:amount 2.5 :units :g}
+  :tags     []}
+ {:id       #uuid "27b1489a-32cd-4095-93ac-fb279a3bd5b7"
+  :title    "bettergood Yogurt Covered Blueberries"
+  :servings {:amount 30.0 :units :g}
+  :calories {:amount 150.0 :units :kcal}
+  :protein  {:amount 0.5 :units :g}
+  :carbs    {:amount 21.0 :units :g}
+  :fat      {:amount 8.0 :units :g}
+  :tags     []}
+ {:id       #uuid "1d24acb3-234b-4b28-8dd7-8ea571003647"
+  :title    "Hills Bros English Toffee Cappuccino"
+  :servings {:amount 40.0 :units :g}
+  :calories {:amount 170.0 :units :kcal}
+  :protein  {:amount 0.5 :units :g}
+  :carbs    {:amount 32.0 :units :g}
+  :fat      {:amount 4.5 :units :g}
+  :tags     []}]
