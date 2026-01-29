@@ -6,5 +6,6 @@
   (nth @e/foods 99)
 
   (e/-main "import" "foods.csv" "crap.csv")
+  (e/-main "export" "foods.edn")
 
   ::end)
