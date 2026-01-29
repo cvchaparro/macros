@@ -1,5 +1,6 @@
 (ns user
   (:require
+   [clojure.repl.deps :refer [sync-deps]]
    [io.cvcf.macros.entrypoint :as e]))
 
 (comment
