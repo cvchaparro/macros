@@ -1,0 +1,5 @@
+{:deps {io.cvcf/macros {:local/root "."}}
+
+ :tasks
+ {macros {:doc  "Run the macros app."
+          :task io.cvcf.macros.entrypoint/-main}}}
