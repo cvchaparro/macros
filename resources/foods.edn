@@ -1,4 +1,12 @@
-[{:id       #uuid "350c6ac1-5173-4dae-83e5-192a8ad0d586"
+[{:id       #uuid "c70d6ef2-fb9c-464c-8a3a-d67da6896108"
+  :title    "Kate's Chicken and Rice"
+  :servings {:amount 100 :units :g}
+  :calories {:amount 126.0 :units :kcal}
+  :protein  {:amount 11.0 :units :g}
+  :carbs    {:amount 6.6 :units :g}
+  :fat      {:amount 5.5 :units :g}
+  :tags     [:soup :homemade]}
+ {:id       #uuid "350c6ac1-5173-4dae-83e5-192a8ad0d586"
   :title    "MM Elderberry Gummies"
   :servings {:amount 2.0 :units :gummies}
   :calories {:amount 20.0 :units :kcal}
