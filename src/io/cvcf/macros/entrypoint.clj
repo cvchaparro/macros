@@ -3,9 +3,11 @@
    [babashka.cli :as cli]
    [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
-   [io.cvcf.macros.new :refer [new-food new-food-spec]]))
+   [io.cvcf.macros.new :refer [new-food new-food-spec
+                               new-log new-log-spec]]))
 
 (def foods (atom nil))
+(def log   (atom nil))
 
 (def commands
   [{:cmds ["import"]
@@ -23,7 +25,11 @@
    {:cmds ["new" "food"]
     :fn (fn [{:keys [opts]}]
           (swap! foods conj (new-food opts)))
-    :spec new-food-spec}])
+    :spec new-food-spec}
+   {:cmds ["new" "log"]
+    :fn (fn [{:keys [opts]}]
+          (reset! log (new-log opts)))
+    :spec new-log-spec}])
 
 (defn -main
   [& args]

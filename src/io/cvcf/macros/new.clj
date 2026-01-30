@@ -1,6 +1,7 @@
 (ns io.cvcf.macros.new
   (:require
-   [clojure.string :as str]))
+   [clojure.string :as str]
+   [tick.core :as t]))
 
 (def default-serving-unit :g)
 (def default-calorie-unit :kcal)
@@ -52,6 +53,12 @@
                   :coerce   []
                   :default  []}})
 
+(def new-log-spec
+  {:title {:desc    "The log title."
+           :alias   :t
+           :require true
+           :default (str (t/date))}})
+
 (defn ->double
   [x]
   (cond
@@ -92,3 +99,14 @@
    :protein  (qty protein macros-unit)
    :carbs    (qty carbs macros-unit)
    :fat      (qty fat macros-unit)})
+
+(defn new-log
+  [{:keys [id title date]
+    :or {id (random-uuid)
+         date (t/instant)}}]
+  {:id id
+   :title title
+   :date date
+   :foods []
+   :fluids []
+   :workouts []})
