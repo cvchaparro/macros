@@ -1,10 +1,9 @@
 (ns io.cvcf.macros.entrypoint
   (:require
    [babashka.cli :as cli]
+   [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
-   [io.cvcf.macros.import.csv]
-   [io.cvcf.macros.import.edn]
-   [io.cvcf.macros.export :as e]))
+   [io.cvcf.macros.new :refer [new-food new-food-spec]]))
 
 (def foods (atom nil))
 
@@ -20,7 +19,11 @@
     :fn #(-> %
              e/prepare
              (e/export* (vec @foods)))
-    :args->opts [:file]}])
+    :args->opts [:file]}
+   {:cmds ["new" "food"]
+    :fn (fn [{:keys [opts]}]
+          (swap! foods conj (new-food opts)))
+    :spec new-food-spec}])
 
 (defn -main
   [& args]
