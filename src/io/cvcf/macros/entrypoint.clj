@@ -3,6 +3,8 @@
    [babashka.cli :as cli]
    [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
+   [io.cvcf.macros.import.csv]
+   [io.cvcf.macros.import.edn]
    [io.cvcf.macros.new :as n]))
 
 (def foods (atom nil))
