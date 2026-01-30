@@ -7,6 +7,8 @@
   (nth @e/foods 99)
 
   (e/-main "import" "foods.csv" "crap.csv")
+  (e/-main "import" "foods.edn")
+
   (e/-main "export" "foods.edn")
 
   (e/-main "new" "food"
