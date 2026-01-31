@@ -35,9 +35,11 @@
 
 (defn ->duration
   [x]
-  (t/between
-   (-> (t/date) (t/at "00:00"))
-   (-> (t/date) (t/at (valid-duration? x)))))
+  (if-let [d (valid-duration? x)]
+    (t/between
+     (-> (t/date) (t/at "00:00"))
+     (-> (t/date) (t/at d)))
+    (println (str "Error parsing duration '" x "'"))))
 
 (defn qty
   [amount units]
