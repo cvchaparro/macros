@@ -22,12 +22,16 @@
   [s]
   (->> (clojure.string/split s #":")
        (zipmap [:h :m])
-       (map (fn [[k v]] (and (= v (re-find #"[0-9]{1,2}" v)) [k v])))
-       (map (fn [[k v]] [k (parse-long v)]))
-       (map (fn [[k v]] (cond (and (= k :h) (<= 10 v 23)) (str v)
-                              (and (= k :m) (<= 10 v 59)) (str v)
-                              (<= 0 v 9)                  (str "0" v))))
-       (str/join ":")))
+       (map #(when-let [[k v] %]
+               (and (= v (re-find #"[0-9]{1,2}" v))
+                    [k (parse-long v)])))
+       (map #(when-let [[k v] %]
+               (cond (and (= k :h) (<= 10 v 23)) (str v)
+                     (and (= k :m) (<= 10 v 59)) (str v)
+                     (<= 0 v 9)                  (str "0" v))))
+       (take-while identity)
+       (#(and (= 2 (count %))
+              (str/join ":" %)))))
 
 (defn ->duration
   [x]
