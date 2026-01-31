@@ -10,17 +10,17 @@
 (def default-fluids-unit  :mL)
 
 (def new-food-spec
-  {:title        {:desc    "The food title."
-                  :alias   :t
-                  :require true}
-   :serving-unit {:desc    "The serving size units."
-                  :alias   :su
-                  :require true
+  {:title        {:desc     "The food title."
+                  :alias    :t
+                  :require  true}
+   :serving-unit {:desc     "The serving size units."
+                  :alias    :su
+                  :require  true
                   :coerce   :keyword
-                  :default default-serving-unit}
-   :serving-size {:desc    "The serving size amount."
-                  :alias   :ss
-                  :require true}
+                  :default  default-serving-unit}
+   :serving-size {:desc     "The serving size amount."
+                  :alias    :ss
+                  :require  true}
    :calorie-unit {:desc     "The units used to measure calories."
                   :alias    :cu
                   :require  true
@@ -75,7 +75,7 @@
   [tags]
   (if (seq tags)
     (->> (if (string? tags) (str/split tags #",") tags)
-         (map u/->keyword))
+         (mapv u/->keyword))
     []))
 
 (defn new-food
