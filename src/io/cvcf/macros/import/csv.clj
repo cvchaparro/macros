@@ -8,11 +8,13 @@
 (defn process-row
   [fields]
   (let [[tt cals & others] fields
-        [_ title ss su] (re-find #"(.*) \(([0-9\/\.]+) ?([A-Za-z ]+)\)" tt)
         [p c f] others]
-    {:title title
-     :serving-unit su :serving-size ss
-     :calories cals :protein p :carbs c :fat f}))
+    (if-let [[_ t ss su]
+             (re-find #"(.*) \(([0-9\/\.]+) ?([A-Za-z ]+)\)" tt)]
+      {:title t
+       :serving-unit su :serving-size ss
+       :calories cals :protein p :carbs c :fat f}
+      (println "Error processing " tt))))
 
 (defn csv-data->maps
   [data]
