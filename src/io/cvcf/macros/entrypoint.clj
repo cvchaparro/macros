@@ -50,7 +50,13 @@
             (let [[food & others] (l/log-food opts)]
               (when-not others
                 (swap! s/log update :foods conj food))))
-    :spec l/log-food-spec}])
+    :spec l/log-food-spec}
+   {:cmds ["log" "fluid"]
+    :fn   (fn [{:keys [opts]}]
+            (let [[fluid & others] (l/log-fluid opts)]
+              (when-not others
+                (swap! s/log update :fluids conj fluid))))
+    :spec l/log-fluid-spec}])
 
 (defn make-log-fspec
   [date]

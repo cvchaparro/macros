@@ -39,8 +39,12 @@
                    (name (u/units fat)))))
 
 (defn print-fluid
-  [{:keys [title servings]}]
-  (println (format "%s: %.1f servings" title servings)))
+  [{:keys [title servings] :as x}]
+  (let [ss (get-in (fluids-by-title) [title :servings])]
+    (println (format "%s: %.1f %s"
+                     title
+                     (* servings (u/amt ss))
+                     (name (u/units ss))))))
 
 (defn update-stats
   []
