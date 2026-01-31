@@ -6,13 +6,13 @@
   ([]           (u/qty 1 :unit))
   ([x]          (u/qty (u/amt x) (u/units x)))
   ([x y]        (u/qty (* (u/amt x) (u/amt y)) (u/units y)))
-  ([x y & more] (apply reduce times (into [x y] more))))
+  ([x y & more] (reduce times (into [x y] more))))
 
 (defn plus
   ([]           (u/qty 0 :unit))
   ([x]          (u/qty (u/amt x) (u/units x)))
   ([x y]        (u/qty (+ (u/amt x) (u/amt y)) (u/units y)))
-  ([x y & more] (apply reduce plus (into [x y] more))))
+  ([x y & more] (reduce plus (into [x y] more))))
 
 (defn add-macros
   [{n1 :n cal1 :calories p1 :protein c1 :carbs f1 :fat}
