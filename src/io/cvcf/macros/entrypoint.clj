@@ -17,10 +17,8 @@
 
 (def commands
   [{:cmds       ["import"]
-    :fn         #(->> %
-                      i/prepare
-                      (mapcat i/import*)
-                      (reset! s/foods))
+    :fn         #(do (reset! s/foods (i/maybe-import %))
+                     (reset! s/foods-imported? true))
     :args->opts [:files]
     :spec       {:files {:coerce []}}}
    {:cmds       ["export"]
@@ -66,7 +64,7 @@
        (catch Exception e#
          (println e#))
        (finally
-         (when s/foods-changed?
+         (when (deref s/foods-changed?)
            (e/export* foods-fspec# (deref s/foods)))
 
          (s/update-stats)

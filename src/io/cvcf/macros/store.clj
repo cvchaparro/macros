@@ -4,7 +4,10 @@
    [io.cvcf.macros.utils :as u]))
 
 (def ^:dynamic *foods-file* "foods.edn")
-(def foods-changed? (atom false))
+
+;; TODO: Explore making this metadata instead of different variables
+(def foods-imported? (atom false))
+(def foods-changed?  (atom false))
 
 (def foods (atom nil))
 (def log   (atom nil))
@@ -39,4 +42,8 @@
     (swap! log update-in [:stats :calories] assoc :in (:calories all))
     (swap! log update-in [:stats] assoc :macros (select-keys all [:protein :carbs :fat]))))
 
-(add-watch foods ::food-updated (fn [_ _ _ _] (when-not @foods-changed? (reset! foods-changed? true))))
+(add-watch
+ foods ::food-updated
+ (fn [_ _ _ _]
+   (when (and @foods-imported (not @foods-changed?))
+     (reset! foods-changed? true))))
