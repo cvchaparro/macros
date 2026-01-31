@@ -1,4 +1,12 @@
-[{:id       #uuid "c70d6ef2-fb9c-464c-8a3a-d67da6896108"
+[{:id       #uuid "1d582180-32db-4a56-8490-66bddca36099"
+  :title    "Sara Lee's Healthy Multigrain Bread"
+  :servings {:amount 44.0 :units :g}
+  :calories {:amount 90.0 :units :kcal}
+  :protein  {:amount 6.0 :units :g}
+  :carbs    {:amount 18.0 :units :g}
+  :fat      {:amount 1.0 :units :g}
+  :tags     [:bread :whole-wheat]}
+ {:id       #uuid "c70d6ef2-fb9c-464c-8a3a-d67da6896108"
   :title    "Kate's Chicken and Rice"
   :servings {:amount 100 :units :g}
   :calories {:amount 126.0 :units :kcal}
