@@ -1,11 +1,10 @@
 (ns user
   (:require
    [clojure.repl.deps :refer [sync-deps]]
-   [io.cvcf.macros.entrypoint :as e]))
+   [io.cvcf.macros.entrypoint :as e]
+   [io.cvcf.macros.store :as s]))
 
 (comment
-  (nth @e/foods 99)
-
   (e/-main "import" "foods.csv" "crap.csv")
   (e/-main "import" "foods.edn")
 
@@ -16,6 +15,10 @@
            "-ss" "100" "-cal" "126" "-p" "11" "-c" "6.6" "-f" "5.5"
            "--tags" "soup" "--tags" "homemade")
 
-  (e/-main "new" "log")
+  (e/-main "new" "log" "-s" "07:36")
+
+  (e/-main "log" "food" "-q" "Quest")
+
+  s/log
 
   ::end)
