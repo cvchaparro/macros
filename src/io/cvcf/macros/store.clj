@@ -38,3 +38,5 @@
                  (reduce a/add-macros))]
     (swap! log update-in [:stats :calories] assoc :in (:calories all))
     (swap! log update-in [:stats] assoc :macros (select-keys all [:protein :carbs :fat]))))
+
+(add-watch foods ::food-updated (fn [_ _ _ _] (when-not @foods-changed? (reset! foods-changed? true))))

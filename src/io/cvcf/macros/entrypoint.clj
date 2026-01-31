@@ -31,8 +31,7 @@
    {:cmds ["new" "food"]
     :fn   (fn [{:keys [opts]}]
             (let [food (n/new-food opts)]
-              (swap! s/foods conj food)
-              (reset! s/foods-changed? true)))
+              (swap! s/foods conj food)))
     :spec n/new-food-spec}
    {:cmds ["new" "log"]
     :fn   (fn [{:keys [opts]}]
