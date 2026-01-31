@@ -8,7 +8,7 @@
 (defn process-row
   [fields]
   (let [[tt cals & others] fields
-        [_ title ss su] (re-find #"(.*) \(([0-9\/\.]+) ?([A-z ]+)\)" tt)
+        [_ title ss su] (re-find #"(.*) \(([0-9\/\.]+) ?([A-Za-z ]+)\)" tt)
         [p c f] others]
     {:title title
      :serving-unit su :serving-size ss
