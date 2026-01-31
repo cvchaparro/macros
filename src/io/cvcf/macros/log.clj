@@ -1,9 +1,9 @@
 (ns io.cvcf.macros.log
   (:require
    [clojure.string :as str]
-   [io.cvcf.macros.arithmetic :as a]
-   [io.cvcf.macros.store :as s]
-   [io.cvcf.macros.utils :as u]))
+   [io.cvcf.macros.store :as s])
+  (:import
+   (java.util.regex Pattern)))
 
 (def log-food-spec
   {:title    {:desc  "The food title."
@@ -29,10 +29,10 @@
       (seq title) [(get foods-by-title title)]
       (seq id)    [(get foods-by-id    id)]
       (seq query)
-      (->> (keys foods-by-title)
-           (filter #(re-find (re-pattern (str/lower-case query))
-                             (str/lower-case %)))
-           (map #(get foods-by-title %))))))
+      (let [re (Pattern/compile query Pattern/CASE_INSENSITIVE)]
+        (->> (keys foods-by-title)
+             (filter #(re-find re %))
+             (map #(get foods-by-title %)))))))
 
 (defn log-food
   [{:keys [servings] :as opts}]
