@@ -62,12 +62,14 @@
     (#(-> % fs/parent fs/create-dirs))))
 
 (defmacro with-log
-  [{:keys [foods-fspec date] :or {foods-fspec s/*foods-file* date (t/today)}} & body]
-  `(let [foods-fspec# (io/resource ~foods-fspec)
-         log-fspec# (fs/file ~(make-log-fspec date))]
+  [{:keys [foods-fspec fluids-fspec date] :or {foods-fspec s/*foods-file* fluids-fspec s/*fluids-file* date (t/today)}} & body]
+  `(let [foods-fspec#  (io/resource ~foods-fspec)
+         fluids-fspec# (io/resource ~fluids-fspec)
+         log-fspec#    (fs/file ~(make-log-fspec date))]
      (try
-       (reset! s/foods (i/maybe-import foods-fspec#))
-       (reset! s/log   (i/maybe-import log-fspec#))
+       (reset! s/foods  (i/maybe-import foods-fspec#))
+       (reset! s/fluids (i/maybe-import fluids-fspec#))
+       (reset! s/log    (i/maybe-import log-fspec#))
 
        ~@body
 
@@ -76,6 +78,9 @@
        (finally
          (when (deref s/foods-changed?)
            (e/export* foods-fspec# (deref s/foods)))
+
+         (when (deref s/fluids-changed?)
+           (e/export* fluids-fspec# (deref s/fluids)))
 
          (s/update-stats)
          (e/export* log-fspec# (deref s/log))))))
