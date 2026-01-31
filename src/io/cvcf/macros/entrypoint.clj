@@ -16,9 +16,14 @@
    [tick.core :as t]))
 
 (def commands
-  [{:cmds       ["import"]
+  [{:cmds       ["import" "foods"]
     :fn         #(do (reset! s/foods (i/maybe-import %))
                      (reset! s/foods-imported? true))
+    :args->opts [:files]
+    :spec       {:files {:coerce []}}}
+   {:cmds       ["import" "fluids"]
+    :fn         #(do (reset! s/fluids (i/maybe-import %))
+                     (reset! s/fluids-imported? true))
     :args->opts [:files]
     :spec       {:files {:coerce []}}}
    {:cmds       ["export"]
