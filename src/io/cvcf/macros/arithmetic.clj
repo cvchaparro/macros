@@ -22,3 +22,8 @@
    :protein  (plus (times n1 p1)   (times n2 p2))
    :carbs    (plus (times n1 c1)   (times n2 c2))
    :fat      (plus (times n1 f1)   (times n2 f2))})
+
+(defn add-fluids
+  [{n1 :n s1 :servings} {n2 :n s2 :servings}]
+  {:n        (u/qty 1 :serving)
+   :servings (plus (times n1 s1) (times n2 s2))})
