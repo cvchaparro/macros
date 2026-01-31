@@ -17,7 +17,7 @@
 
 (defn format-with-options
   [opts data]
-  (zp/zprint-str data opts))
+  (str (zp/zprint-str data opts) "\n"))
 
 (defn export*
   [f data]
