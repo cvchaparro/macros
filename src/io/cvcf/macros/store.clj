@@ -45,5 +45,5 @@
 (add-watch
  foods ::food-updated
  (fn [_ _ _ _]
-   (when (and @foods-imported (not @foods-changed?))
+   (when (and @foods-imported? (not @foods-changed?))
      (reset! foods-changed? true))))
