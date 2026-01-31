@@ -47,3 +47,7 @@
 
 (defn amt   [{:keys [amount]}] amount)
 (defn units [{:keys [units]}]  units)
+
+(defn replace-value
+  [m k match replacement]
+  (assoc m k (str/replace (k m) match replacement)))
