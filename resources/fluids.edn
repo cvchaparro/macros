@@ -1,0 +1,20 @@
+[{:id       #uuid "9bedb242-821a-416f-adaf-be3c429f671e"
+  :title    "Protein Shake"
+  :servings {:amount 240.0 :units :mL}
+  :tags     [:protein]}
+ {:id       #uuid "a63fa8cb-90b8-4fc5-acbe-b71dbe629876"
+  :title    "Tea"
+  :servings {:amount 240.0 :units :mL}
+  :tags     [:primary :caffeine :no-caffeine]}
+ {:id       #uuid "3980373d-1d7d-4212-aa2f-1512970db1a3"
+  :title    "Milk"
+  :servings {:amount 240.0 :units :mL}
+  :tags     []}
+ {:id       #uuid "94ac6e84-5332-46b2-9fa3-105ac8c517d8"
+  :title    "Coffee"
+  :servings {:amount 240.0 :units :mL}
+  :tags     [:primary :caffeine]}
+ {:id       #uuid "ab41a24e-c0d4-482b-a5ea-8fcc2104f676"
+  :title    "Water"
+  :servings {:amount 240.0 :units :mL}
+  :tags     [:primary]}]
