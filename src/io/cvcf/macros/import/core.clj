@@ -8,4 +8,11 @@
 (defn prepare
   [{:keys [opts]}]
   (let [{:keys [files]} opts]
-    (map #(if (fs/exists? %) % (io/resource %)) files)))
+    (->> files
+         (map #(if (fs/exists? %) % (io/resource %)))
+         (filter identity))))
+
+(defn maybe-import
+  [f]
+  (when-let [[file] (seq (prepare {:opts {:files [f]}}))]
+    (import* file)))

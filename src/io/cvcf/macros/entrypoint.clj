@@ -1,6 +1,9 @@
 (ns io.cvcf.macros.entrypoint
   (:require
    [babashka.cli :as cli]
+   [babashka.fs :as fs]
+   [clojure.java.io :as io]
+   [clojure.string :as str]
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
@@ -9,7 +12,8 @@
    [io.cvcf.macros.log :as l]
    [io.cvcf.macros.new :as n]
    [io.cvcf.macros.store :as s]
-   [io.cvcf.macros.utils :as u]))
+   [io.cvcf.macros.utils :as u]
+   [tick.core :as t]))
 
 (def commands
   [{:cmds       ["import"]
@@ -27,7 +31,8 @@
    {:cmds ["new" "food"]
     :fn   (fn [{:keys [opts]}]
             (let [food (n/new-food opts)]
-              (swap! s/foods conj food)))
+              (swap! s/foods conj food)
+              (reset! s/foods-changed? true)))
     :spec n/new-food-spec}
    {:cmds ["new" "log"]
     :fn   (fn [{:keys [opts]}]
@@ -40,9 +45,38 @@
                 (swap! s/log update :foods conj food))))
     :spec l/log-food-spec}])
 
+(defn make-log-fspec
+  [date]
+  (doto (->> (str date)
+             (#(str/split % #"-"))
+             (into ["logs"])
+             (str/join fs/file-separator)
+             (#(str % ".edn")))
+    (#(-> % fs/parent fs/create-dirs))))
+
+(defmacro with-log
+  [{:keys [foods-fspec date] :or {foods-fspec s/*foods-file* date (t/today)}} & body]
+  `(let [foods-fspec# (io/resource ~foods-fspec)
+         log-fspec# (fs/file ~(make-log-fspec date))]
+     (try
+       (reset! s/foods (i/maybe-import foods-fspec#))
+       (reset! s/log   (i/maybe-import log-fspec#))
+
+       ~@body
+
+       (catch Exception e#
+         (println e#))
+       (finally
+         (when s/foods-changed?
+           (e/export* foods-fspec# (deref s/foods)))
+
+         (s/update-stats)
+         (e/export* log-fspec# (deref s/log))))))
+
 (defn -main
   [& args]
-  (cli/dispatch commands args))
+  (with-log {}
+    (cli/dispatch commands args)))
 
 (comment
 
@@ -59,14 +93,5 @@
                   (u/amt carbs)    (name (u/units carbs))
                   (u/amt fat)      (name (u/units fat)))))
        println)
-
-  ;; Update stats based on combined calories and macros
-  (let [all (->> (:foods @s/log)
-                 (map #(assoc (get (s/foods-by-id) ((comp str :id) %))
-                              :n
-                              (u/qty (:servings %) :serving)))
-                 (reduce a/add-macros))]
-    (swap! s/log update-in [:stats :calories] assoc :in (:calories all))
-    (swap! s/log update-in [:stats] assoc :macros (select-keys all [:protein :carbs :fat])))
 
   ::end)

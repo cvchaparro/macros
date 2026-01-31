@@ -2,10 +2,11 @@
   (:require
    [clojure.edn :as edn]
    [clojure.java.io :as io]
-   [io.cvcf.macros.import.core :as i]))
+   [io.cvcf.macros.import.core :as i]
+   [time-literals.read-write :as rw]))
 
 (defmethod i/import* "edn"
   [input]
-  (-> (io/reader input)
-      java.io.PushbackReader.
-      edn/read))
+  (->> (io/reader input)
+       java.io.PushbackReader.
+       (edn/read {:readers rw/tags})))
