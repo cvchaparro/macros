@@ -12,32 +12,32 @@
    [io.cvcf.macros.utils :as u]))
 
 (def commands
-  [{:cmds ["import"]
-    :fn #(->> %
-              i/prepare
-              (mapcat i/import*)
-              (reset! s/foods))
+  [{:cmds       ["import"]
+    :fn         #(->> %
+                      i/prepare
+                      (mapcat i/import*)
+                      (reset! s/foods))
     :args->opts [:files]
-    :spec {:files {:coerce []}}}
-   {:cmds ["export"]
-    :fn #(-> %
-             e/prepare
-             (e/export* (vec @s/foods)))
+    :spec       {:files {:coerce []}}}
+   {:cmds       ["export"]
+    :fn         #(-> %
+                     e/prepare
+                     (e/export* (vec @s/foods)))
     :args->opts [:file]}
    {:cmds ["new" "food"]
-    :fn (fn [{:keys [opts]}]
-          (let [food (n/new-food opts)]
-            (swap! s/foods conj food)))
+    :fn   (fn [{:keys [opts]}]
+            (let [food (n/new-food opts)]
+              (swap! s/foods conj food)))
     :spec n/new-food-spec}
    {:cmds ["new" "log"]
-    :fn (fn [{:keys [opts]}]
-          (reset! s/log (n/new-log opts)))
+    :fn   (fn [{:keys [opts]}]
+            (reset! s/log (n/new-log opts)))
     :spec n/new-log-spec}
    {:cmds ["log" "food"]
-    :fn (fn [{:keys [opts]}]
-          (let [[food & others] (l/log-food opts)]
-            (when-not others
-              (swap! s/log update :foods conj food))))
+    :fn   (fn [{:keys [opts]}]
+            (let [[food & others] (l/log-food opts)]
+              (when-not others
+                (swap! s/log update :foods conj food))))
     :spec l/log-food-spec}])
 
 (defn -main
