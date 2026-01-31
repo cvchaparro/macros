@@ -31,6 +31,11 @@
             (let [food (n/new-food opts)]
               (swap! s/foods conj food)))
     :spec n/new-food-spec}
+   {:cmds ["new" "fluid"]
+    :fn   (fn [{:keys [opts]}]
+            (let [fluid (n/new-fluid opts)]
+              (swap! s/fluids conj fluid)))
+    :spec n/new-fluid-spec}
    {:cmds ["new" "log"]
     :fn   (fn [{:keys [opts]}]
             (reset! s/log (n/new-log opts)))

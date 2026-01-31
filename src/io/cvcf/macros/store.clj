@@ -3,21 +3,27 @@
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.utils :as u]))
 
-(def ^:dynamic *foods-file* "foods.edn")
+(def ^:dynamic *foods-file*  "foods.edn")
+(def ^:dynamic *fluids-file* "fluids.edn")
 
 ;; TODO: Explore making this metadata instead of different variables
-(def foods-imported? (atom false))
-(def foods-changed?  (atom false))
+(def foods-imported?  (atom false))
+(def fluids-imported? (atom false))
+(def foods-changed?   (atom false))
+(def fluids-changed?  (atom false))
 
-(def foods (atom nil))
-(def log   (atom nil))
+(def foods  (atom nil))
+(def fluids (atom nil))
+(def log    (atom nil))
 
-(defn foods-by
-  [key-fn]
-  (into {} (map (juxt key-fn identity) @foods)))
+(defn by
+  [a key-fn]
+  (into {} (map (juxt key-fn identity) @a)))
 
-(defn foods-by-id    [] (foods-by (comp str :id)))
-(defn foods-by-title [] (foods-by :title))
+(defn foods-by-id     [] (by foods (comp str :id)))
+(defn fluids-by-id    [] (by fluids (comp str :id)))
+(defn foods-by-title  [] (by foods :title))
+(defn fluids-by-title [] (by fluids :title))
 
 (defn print-food
   [{:keys [title servings calories protein carbs fat]}]
@@ -31,6 +37,10 @@
                    (name (u/units carbs))
                    (* servings (u/amt fat))
                    (name (u/units fat)))))
+
+(defn print-fluid
+  [{:keys [title servings]}]
+  (println (format "%s: %.1f servings" title servings)))
 
 (defn update-stats
   []
@@ -47,3 +57,9 @@
  (fn [_ _ _ _]
    (when (and @foods-imported? (not @foods-changed?))
      (reset! foods-changed? true))))
+
+(add-watch
+ fluids ::fluid-updated
+ (fn [_ _ _ _]
+   (when (and @fluids-imported? (not @fluids-changed?))
+     (reset! fluids-changed? true))))

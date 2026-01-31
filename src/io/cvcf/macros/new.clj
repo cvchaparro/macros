@@ -55,6 +55,12 @@
                   :coerce   []
                   :default  []}})
 
+(def new-fluid-spec
+  (-> new-food-spec
+      (select-keys [:title :serving-size :serving-unit :tags])
+      (update-vals #(u/replace-value % :desc #"food" "fluid"))
+      (assoc-in [:serving-unit :default] default-fluids-unit)))
+
 (def new-log-spec
   {:title {:desc    "The log title."
            :alias   :t
@@ -87,6 +93,12 @@
    :protein  (u/qty protein macros-unit)
    :carbs    (u/qty carbs macros-unit)
    :fat      (u/qty fat macros-unit)})
+
+(defn new-fluid
+  [{:keys [id title serving-size serving-unit tags]
+    :or   {id (random-uuid) serving-unit default-fluids-unit}}]
+  {:id id :tags (split-tags tags) :title title
+   :servings (u/qty serving-size serving-unit)})
 
 (defn new-log
   [{:keys [id title date sleep]
