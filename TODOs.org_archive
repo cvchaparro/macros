@@ -1,0 +1,24 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/cvc/git/cvcf/macros/TODOs.org
+
+
+* DONE Add foods/fluids by units instead of just servings
+CLOSED: [2026-02-01 Sun 13:13]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-01 Sun 13:13
+:ARCHIVE_FILE: ~/git/cvcf/macros/TODOs.org
+:ARCHIVE_CATEGORY: macros
+:ARCHIVE_TODO: DONE
+:END:
+
+Some servings are easy to add (e.g. if I have 1/2 a serving, I can just pass "-s
+0.5" and that's actually required, right now) but what if I have 70g and the
+serving size is 32g.
+
+This feature would allow me to say (e.g.) "log food -t whatever -u 70" and it
+will auto-calculate the number of servings instead of me having to do that math
+beforehand.
+
+A simple feature that adds good quality of life.
