@@ -1935,4 +1935,12 @@
   :protein  {:amount 0.5 :units :g}
   :carbs    {:amount 32.0 :units :g}
   :fat      {:amount 4.5 :units :g}
-  :tags     []}]
+  :tags     []}
+ {:id       #uuid "b7b6b665-7d8e-4cda-bac6-3f9afda970dc"
+  :title    "King Oscar Mackerel Mediterranean Style"
+  :servings {:amount 115.0 :units :g}
+  :calories {:amount 220.0 :units :kcal}
+  :protein  {:amount 15.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 18.0 :units :g}
+  :tags     [:fish :fat :king-oscar :canned]}]
