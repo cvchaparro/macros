@@ -113,13 +113,15 @@
 (comment
 
   ;; Collect all logged foods and show the daily macros
-  (->> (s/combine :foods s/foods-by-id a/add-macros)
-       ((fn [{:keys [calories protein carbs fat]}]
-          (format "%.1f %s :: (%.1f%s p, %.1f%s c, %.1f%s f)"
-                  (u/amt calories) (name (u/units calories))
-                  (u/amt protein)  (name (u/units protein))
-                  (u/amt carbs)    (name (u/units carbs))
-                  (u/amt fat)      (name (u/units fat)))))
+  (->> (s/combine s/log :foods s/foods-by-id a/add-macros)
+       ((fn [{:keys [calories protein carbs fat] :as macros}]
+          (if macros
+            (format "%.1f %s :: (%.1f%s p, %.1f%s c, %.1f%s f)"
+                    (u/amt calories) (name (u/units calories))
+                    (u/amt protein)  (name (u/units protein))
+                    (u/amt carbs)    (name (u/units carbs))
+                    (u/amt fat)      (name (u/units fat)))
+            "Nothing to display. Add some foods and try again.")))
        println)
 
   ::end)
