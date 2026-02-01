@@ -45,7 +45,7 @@
                    (name (u/units fat)))))
 
 (defn print-fluid
-  [{:keys [title servings] :as x}]
+  [{:keys [title servings]}]
   (let [ss (get-in (fluids-by-title) [title :servings])]
     (println (format "%s: %.1f %s"
                      title
@@ -53,7 +53,7 @@
                      (name (u/units ss))))))
 
 (defn print-workout
-  [{:keys [title sets] :as opts}]
+  [{:keys [title sets]}]
   (println (str title ":"))
   (vec
    (map-indexed (fn [i {:keys [reps duration]}]
