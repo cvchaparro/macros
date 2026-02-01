@@ -40,6 +40,11 @@
                   (let [fluid (n/new-fluid opts)]
                     (swap! s/fluids conj fluid)))
     :spec       n/new-fluid-spec}
+   {:cmds       ["new" "workout"]
+    :fn         (fn [{:keys [opts]}]
+                  (let [workout (n/new-workout opts)]
+                    (swap! s/workouts conj workout)))
+    :spec       n/new-workout-spec}
    {:cmds       ["new" "log"]
     :fn         (fn [{:keys [opts]}]
                   (reset! s/log (n/new-log opts)))
