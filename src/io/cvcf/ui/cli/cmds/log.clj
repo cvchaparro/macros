@@ -26,4 +26,5 @@
     :fn   (fn [{:keys [opts]}]
             (when-let [calories (l/log-calories opts)]
               (swap! s/log update-in [:stats :calories] assoc :out calories)))
-    :spec l/log-calories-spec}])
+    :spec l/log-calories-spec
+    :args->opts [:cals]}])
