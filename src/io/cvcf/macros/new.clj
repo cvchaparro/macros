@@ -1,13 +1,9 @@
 (ns io.cvcf.macros.new
   (:require
    [clojure.string :as str]
+   [io.cvcf.macros.defaults :as d]
    [io.cvcf.macros.utils :as u]
    [tick.core :as t]))
-
-(def default-serving-unit :g)
-(def default-calorie-unit :kcal)
-(def default-macros-unit  :g)
-(def default-fluids-unit  :mL)
 
 (def new-food-spec
   {:title        {:desc     "The food title."
@@ -17,7 +13,7 @@
                   :alias    :su
                   :require  true
                   :coerce   :keyword
-                  :default  default-serving-unit}
+                  :default  d/default-serving-unit}
    :serving-size {:desc     "The serving size amount."
                   :alias    :ss
                   :require  true}
@@ -25,7 +21,7 @@
                   :alias    :cu
                   :require  true
                   :coerce   :keyword
-                  :default  default-calorie-unit}
+                  :default  d/default-calorie-unit}
    :calories     {:desc     "The calories in one serving."
                   :alias    :cal
                   :require  true
@@ -35,7 +31,7 @@
                   :alias    :mu
                   :require  true
                   :coerce   :keyword
-                  :default  default-macros-unit}
+                  :default  d/default-macros-unit}
    :protein      {:desc     "The protein in one serving."
                   :alias    :p
                   :default  0
@@ -59,7 +55,7 @@
   (-> new-food-spec
       (select-keys [:title :serving-size :serving-unit :tags])
       (update-vals #(u/replace-value % :desc #"food" "fluid"))
-      (assoc-in [:serving-unit :default] default-fluids-unit)))
+      (assoc-in [:serving-unit :default] d/default-fluids-unit)))
 
 (def new-workout-spec
   (-> new-food-spec
@@ -89,9 +85,9 @@
            calorie-unit calories
            macros-unit protein carbs fat tags]
     :or {id (random-uuid)
-         serving-unit default-serving-unit
-         calorie-unit default-calorie-unit
-         macros-unit default-macros-unit}}]
+         serving-unit d/default-serving-unit
+         calorie-unit d/default-calorie-unit
+         macros-unit d/default-macros-unit}}]
   {:id id :tags (split-tags tags) :title title
    :servings (u/qty serving-size serving-unit)
    :calories (u/qty calories calorie-unit)
@@ -101,7 +97,7 @@
 
 (defn new-fluid
   [{:keys [id title serving-size serving-unit tags]
-    :or   {id (random-uuid) serving-unit default-fluids-unit}}]
+    :or   {id (random-uuid) serving-unit d/default-fluids-unit}}]
   {:id id :tags (split-tags tags) :title title
    :servings (u/qty serving-size serving-unit)})
 
@@ -117,12 +113,12 @@
   {:id       id
    :title    title
    :date     date
-   :stats    {:calories {:in  (u/qty 0 default-calorie-unit)
-                         :out (u/qty 0 default-calorie-unit)}
-              :macros   {:protein (u/qty 0 default-macros-unit)
-                         :carbs   (u/qty 0 default-macros-unit)
-                         :fat     (u/qty 0 default-macros-unit)}
-              :fluids   (u/qty 0 default-fluids-unit)
+   :stats    {:calories {:in  (u/qty 0 d/default-calorie-unit)
+                         :out (u/qty 0 d/default-calorie-unit)}
+              :macros   {:protein (u/qty 0 d/default-macros-unit)
+                         :carbs   (u/qty 0 d/default-macros-unit)
+                         :fat     (u/qty 0 d/default-macros-unit)}
+              :fluids   (u/qty 0 d/default-fluids-unit)
               :sleep    (u/->duration sleep)}
    :foods    []
    :fluids   []
