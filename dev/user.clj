@@ -1,8 +1,9 @@
 (ns user
   (:require
-   [clojure.repl.deps :refer [sync-deps]]
    [io.cvcf.macros.entrypoint :as e]
-   [io.cvcf.macros.store :as s]))
+   [io.cvcf.macros.import.core :as i]
+   [io.cvcf.macros.store :as s]
+   [tick.core :as t]))
 
 (comment
   (e/-main "import" "foods.csv" "crap.csv")
@@ -19,6 +20,18 @@
 
   (e/-main "log" "food" "-q" "Quest")
 
-  s/log
+  ;; Reload the foods
+  (i/handle-import s/*foods-file* s/foods)
+
+  ;; Reload the fluids
+  (i/handle-import s/*fluids-file* s/fluids)
+
+  ;; Reload the workouts
+  (i/handle-import s/*workouts-file* s/workouts)
+
+  ;; Load today's log
+  (-> (t/today)
+      e/make-log-fspec
+      (i/handle-import s/log))
 
   ::end)
