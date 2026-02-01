@@ -34,8 +34,8 @@
    :id           {:desc     "The workout id."
                   :alias    :i
                   :restrict [:title :query]}
-   :query        {:desc  "Search for a substring of the title."
-                  :alias :q
+   :query        {:desc     "Search for a substring of the title."
+                  :alias    :q
                   :restrict [:title :id]}
    :duration     {:desc     "The duration spent doing the exercise."
                   :alias    :d
