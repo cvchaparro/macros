@@ -7,8 +7,8 @@
    [tick.core :as t]))
 
 (comment
-  (e/-main "import" "foods.csv" "crap.csv")
-  (e/-main "import" "foods.edn")
+  (e/-main "import" "foods" "foods.csv" "crap.csv")
+  (e/-main "import" "foods" "foods.edn")
 
   (e/-main "export" "foods.edn")
 
@@ -19,7 +19,10 @@
 
   (e/-main "new" "log" "-s" "07:36")
 
-  (e/-main "log" "food" "-q" "Quest")
+  (e/-main "log" "food" "-q" "butter" "-u" "19")
+  (e/-main "log" "fluid" "-q" "coffee" "-u" "483")
+
+  (s/update-stats)
 
   ;; Reload the foods
   (i/handle-import s/*foods-file* s/foods)
