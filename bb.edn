@@ -2,4 +2,4 @@
 
  :tasks
  {macros {:doc  "Run the macros app."
-          :task io.cvcf.macros.entrypoint/-main}}}
+          :task io.cvcf.ui.cli.entrypoint/-main}}}

@@ -1,4 +1,4 @@
-(ns io.cvcf.macros.entrypoint
+(ns io.cvcf.ui.cli.entrypoint
   (:require
    [babashka.cli :as cli]
    [io.cvcf.macros.arithmetic :as a]

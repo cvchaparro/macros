@@ -1,6 +1,6 @@
 (ns user
   (:require
-   [io.cvcf.macros.entrypoint :as e]
+   [io.cvcf.ui.cli.entrypoint :as e]
    [io.cvcf.macros.import.core :as i]
    [io.cvcf.macros.new :as n]
    [io.cvcf.macros.store :as s]
