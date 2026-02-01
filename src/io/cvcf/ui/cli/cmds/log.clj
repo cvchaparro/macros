@@ -3,24 +3,26 @@
    [io.cvcf.macros.log :as l]
    [io.cvcf.macros.store :as s]))
 
+(defn log-item
+  [ks items]
+  (let [[i & others] items
+        ks (if (coll? ks) ks [ks])]
+    (when-not others
+      (swap! s/log update-in ks conj i))))
+
+(defn apply-with-opts
+  [f {:keys [opts]}]
+  (f opts))
+
 (def commands
   [{:cmds ["log" "food"]
-    :fn   (fn [{:keys [opts]}]
-            (let [[food & others] (l/log-food opts)]
-              (when-not others
-                (swap! s/log update :foods conj food))))
+    :fn   #(log-item :foods (apply-with-opts l/log-food %))
     :spec l/log-food-spec}
    {:cmds ["log" "fluid"]
-    :fn   (fn [{:keys [opts]}]
-            (let [[fluid & others] (l/log-fluid opts)]
-              (when-not others
-                (swap! s/log update :fluids conj fluid))))
+    :fn   #(log-item :fluids (apply-with-opts l/log-fluid %))
     :spec l/log-fluid-spec}
    {:cmds ["log" "workout"]
-    :fn   (fn [{:keys [opts]}]
-            (let [[workout & others] (l/log-workout opts)]
-              (when-not others
-                (swap! s/log update :workouts conj workout))))
+    :fn   #(log-item :workouts (apply-with-opts l/log-workout %))
     :spec l/log-workout-spec}
    {:cmds ["log" "cals"]
     :fn   (fn [{:keys [opts]}]
