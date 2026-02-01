@@ -19,9 +19,13 @@
               :restrict [:title :id]}
    :servings {:desc     "The number of servings consumed."
               :alias    :s
-              :required true
               :coerce   :double
-              :default  1.0}})
+              :default  1.0
+              :restrict [:units]}
+   :units    {:desc     "The number of units consumed."
+              :alias    :u
+              :coerce   :double
+              :restrict [:servings]}})
 
 (def log-fluid-spec
   (-> log-food-spec
@@ -94,13 +98,20 @@
       :else
       (println "Not found. Nothing logged."))))
 
+(defn units->servings
+  [{:keys [units] :as opts} finder]
+  (when-let [[f & others] (finder opts)]
+    (when-not others
+      (/ units (u/amt (:servings f))))))
+
 (defn find-food
   [opts]
   (find* (merge opts {:by-id (s/foods-by-id) :by-title (s/foods-by-title)})))
 
 (defn log-food
   [{:keys [servings] :as opts}]
-  (log* opts find-food s/print-food [:servings]))
+  (let [opts (assoc opts :servings (or servings (units->servings opts find-food)))]
+    (log* opts find-food s/print-food [:servings])))
 
 (defn find-fluid
   [opts]
@@ -108,7 +119,8 @@
 
 (defn log-fluid
   [{:keys [servings] :as opts}]
-  (log* opts find-fluid s/print-fluid [:servings]))
+  (let [opts (assoc opts :servings (or servings (units->servings opts find-fluid)))]
+    (log* opts find-fluid s/print-fluid [:servings])))
 
 (defn find-workout
   [opts]
