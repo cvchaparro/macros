@@ -1,128 +1,20 @@
 (ns io.cvcf.ui.cli.entrypoint
   (:require
    [babashka.cli :as cli]
-   [io.cvcf.macros.arithmetic :as a]
-   [io.cvcf.macros.export :as e]
-   [io.cvcf.macros.import.core :as i]
-   [io.cvcf.macros.import.csv]
-   [io.cvcf.macros.import.edn]
-   [io.cvcf.macros.log :as l]
-   [io.cvcf.macros.new :as n]
-   [io.cvcf.macros.store :as s]
-   [io.cvcf.macros.utils :as u]
-   [tick.core :as t]))
+   [io.cvcf.ui.cli.core :refer [with-log]]
+   [io.cvcf.ui.cli.cmds.import :refer [commands] :rename {commands import-commands}]
+   [io.cvcf.ui.cli.cmds.export :refer [commands] :rename {commands export-commands}]
+   [io.cvcf.ui.cli.cmds.new :refer [commands] :rename {commands new-commands}]
+   [io.cvcf.ui.cli.cmds.log :refer [commands] :rename {commands log-commands}]))
 
 (def commands
-  [{:cmds       ["import" "foods"]
-    :fn         #(i/handle-import % s/foods s/foods-imported?)
-    :args->opts [:files]
-    :spec       {:files {:coerce []}}}
-   {:cmds       ["import" "fluids"]
-    :fn         #(i/handle-import % s/fluids s/fluids-imported?)
-    :args->opts [:files]
-    :spec       {:files {:coerce []}}}
-   {:cmds       ["import" "workouts"]
-    :fn         #(i/handle-import % s/workouts s/workouts-imported?)
-    :args->opts [:files]
-    :spec       {:files {:coerce []}}}
-   {:cmds       ["export"]
-    :fn         #(-> % e/prepare (e/export* (vec @s/foods)))
-    :args->opts [:file]}
-   {:cmds       ["new" "food"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [food (n/new-food opts)]
-                    (swap! s/foods conj food)))
-    :spec       n/new-food-spec}
-   {:cmds       ["new" "fluid"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [fluid (n/new-fluid opts)]
-                    (swap! s/fluids conj fluid)))
-    :spec       n/new-fluid-spec}
-   {:cmds       ["new" "workout"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [workout (n/new-workout opts)]
-                    (swap! s/workouts conj workout)))
-    :spec       n/new-workout-spec}
-   {:cmds       ["new" "log"]
-    :fn         (fn [{:keys [opts]}]
-                  (reset! s/log (n/new-log opts)))
-    :spec       n/new-log-spec
-    :args->opts [:file]}
-   {:cmds       ["log" "food"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [[food & others] (l/log-food opts)]
-                    (when-not others
-                      (swap! s/log update :foods conj food))))
-    :spec       l/log-food-spec}
-   {:cmds       ["log" "fluid"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [[fluid & others] (l/log-fluid opts)]
-                    (when-not others
-                      (swap! s/log update :fluids conj fluid))))
-    :spec       l/log-fluid-spec}
-   {:cmds       ["log" "workout"]
-    :fn         (fn [{:keys [opts]}]
-                  (let [[workout & others] (l/log-workout opts)]
-                    (when-not others
-                      (swap! s/log update :workouts conj workout))))
-    :spec       l/log-workout-spec}
-   {:cmds       ["log" "cals"]
-    :fn         (fn [{:keys [opts]}]
-                  (when-let [calories (l/log-calories opts)]
-                    (swap! s/log update-in [:stats :calories] assoc :out calories)))
-    :spec       l/log-calories-spec}])
-
-(defmacro with-log
-  [{:keys [foods-fspec fluids-fspec workouts-fspec date]
-    :or   {foods-fspec    s/*foods-file*
-           fluids-fspec   s/*fluids-file*
-           workouts-fspec s/*workouts-file*
-           date           (t/today)}}
-   & body]
-  `(let [foods-fspec#    (u/new-resource ~foods-fspec)
-         fluids-fspec#   (u/new-resource ~fluids-fspec)
-         workouts-fspec# (u/new-resource ~workouts-fspec)
-         log-fspec#      ~(n/make-log-fspec date)]
-     (try
-       (i/handle-import foods-fspec# s/foods s/foods-imported?)
-       (i/handle-import fluids-fspec# s/fluids s/fluids-imported?)
-       (i/handle-import workouts-fspec# s/workouts s/workouts-imported?)
-       (i/handle-import log-fspec# s/log {:create? true})
-
-       ~@body
-
-       (s/update-stats)
-       (catch Exception e#
-         (println e#))
-       (finally
-         (when @s/foods-changed?
-           (e/export* foods-fspec# @s/foods))
-
-         (when @s/fluids-changed?
-           (e/export* fluids-fspec# @s/fluids))
-
-         (when @s/workouts-changed?
-           (e/export* workouts-fspec# @s/workouts))
-
-         (e/export* log-fspec# @s/log)))))
+  (concat
+   import-commands
+   export-commands
+   new-commands
+   log-commands))
 
 (defn -main
   [& args]
   (with-log {}
     (cli/dispatch commands args)))
-
-(comment
-
-  ;; Collect all logged foods and show the daily macros
-  (->> (s/combine s/log :foods s/foods-by-id a/add-macros)
-       ((fn [{:keys [calories protein carbs fat] :as macros}]
-          (if macros
-            (format "%.1f %s :: (%.1f%s p, %.1f%s c, %.1f%s f)"
-                    (u/amt calories) (name (u/units calories))
-                    (u/amt protein)  (name (u/units protein))
-                    (u/amt carbs)    (name (u/units carbs))
-                    (u/amt fat)      (name (u/units fat)))
-            "Nothing to display. Add some foods and try again.")))
-       println)
-
-  ::end)
