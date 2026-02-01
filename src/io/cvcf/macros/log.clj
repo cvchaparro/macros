@@ -51,7 +51,7 @@
    :reps         {:desc     "The number of reps in at least one set."
                   :alias    :r
                   :coerce   [:int]}
-   :tags         {:desc     "Tag(s) associated with the food."
+   :tags         {:desc     "Tag(s) associated with the workout."
                   :coerce   []
                   :default  []}})
 
