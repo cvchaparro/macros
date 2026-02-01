@@ -1,5 +1,6 @@
 (ns io.cvcf.ui.cli.core
   (:require
+   [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
    [io.cvcf.macros.new :as n]
    [io.cvcf.macros.store :as s]
