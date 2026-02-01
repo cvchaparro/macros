@@ -20,7 +20,6 @@
    :servings {:desc     "The number of servings consumed."
               :alias    :s
               :coerce   :double
-              :default  1.0
               :restrict [:units]}
    :units    {:desc     "The number of units consumed."
               :alias    :u
