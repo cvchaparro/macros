@@ -52,16 +52,17 @@
                      (* servings (u/amt ss))
                      (name (u/units ss))))))
 
+(defn combine
+  [k by-id adder]
+  (->> (k @log)
+       (map #(assoc (get (by-id) ((comp str :id) %))
+                    :n (u/qty (:servings %) :serving)))
+       (reduce adder)))
+
 (defn update-stats
   []
-  (let [foods  (->> (:foods @log)
-                    (map #(assoc (get (foods-by-id) ((comp str :id) %))
-                                 :n (u/qty (:servings %) :serving)))
-                    (reduce a/add-macros))
-        fluids (->> (:fluids @log)
-                    (map #(assoc (get (fluids-by-id) ((comp str :id) %))
-                                 :n (u/qty (:servings %) :serving)))
-                    (reduce a/add-fluids))]
+  (let [foods  (combine :foods foods-by-id a/add-macros)
+        fluids (combine :fluids fluids-by-id a/add-fluids)]
     (swap! log update-in [:stats :calories] assoc :in (:calories foods))
     (swap! log update-in [:stats] assoc :macros (select-keys foods [:protein :carbs :fat]))
     (swap! log update-in [:stats] assoc :fluids (:servings fluids))))

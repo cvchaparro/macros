@@ -109,11 +109,7 @@
 (comment
 
   ;; Collect all logged foods and show the daily macros
-  (->> (:foods @s/log)
-       (map #(assoc (get (s/foods-by-id) ((comp str :id) %))
-                    :n
-                    (u/qty (:servings %) :serving)))
-       (reduce a/add-macros)
+  (->> (s/combine :foods s/foods-by-id a/add-macros)
        ((fn [{:keys [calories protein carbs fat]}]
           (format "%.1f %s :: (%.1f%s p, %.1f%s c, %.1f%s f)"
                   (u/amt calories) (name (u/units calories))
