@@ -1,0 +1,18 @@
+[{:id    #uuid "fdec2394-213a-482d-bcf9-eeee0a34d21b"
+  :title "GtG: Pull-ups"
+  :tags  [:gtg :grip :arms :back]}
+ {:id    #uuid "d6070969-068c-4bd0-9bae-4043d5545f8c"
+  :title "GtG: Push-ups"
+  :tags  [:gtg :chest :arms :shoulders]}
+ {:id    #uuid "7a4a56bd-ad03-454f-af9e-f9545e2a917a"
+  :title "GtG: Sit-ups"
+  :tags  [:gtg :abs :core]}
+ {:id    #uuid "c68937ab-1b42-48fd-a2ca-7bdd11cc51ba"
+  :title "Pull-ups"
+  :tags  [:grip :arms :back]}
+ {:id    #uuid "08c559cf-0a89-49a3-aeb3-511437cb36b7"
+  :title "Push-ups"
+  :tags  [:chest :arms :shoulders]}
+ {:id    #uuid "1e0a9784-53da-483c-9c77-c95533502ad0"
+  :title "Sit-ups"
+  :tags  [:abs :core]}]
