@@ -78,7 +78,8 @@
 (defn split-tags
   [tags]
   (if (seq tags)
-    (->> (if (string? tags) (str/split tags #",") tags)
+    (->> tags
+         (mapcat #(if (string? %) (str/split % #",") %))
          (mapv u/->keyword))
     []))
 
