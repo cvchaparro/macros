@@ -62,19 +62,23 @@
                 sets)))
 
 (defn combine
-  [k by-id adder]
-  (->> (k @log)
-       (map #(assoc (get (by-id) ((comp str :id) %))
-                    :n (u/qty (:servings %) :serving)))
-       (reduce adder)))
+  [atom k by-id adder]
+  (when-let [items (seq (k @atom))]
+    (->> items
+         (map #(assoc (get (by-id) ((comp str :id) %))
+                      :n (u/qty (:servings %) :serving)))
+         (reduce adder))))
 
 (defn update-stats
   []
-  (let [foods  (combine :foods foods-by-id a/add-macros)
-        fluids (combine :fluids fluids-by-id a/add-fluids)]
-    (swap! log update-in [:stats :calories] assoc :in (:calories foods))
-    (swap! log update-in [:stats] assoc :macros (select-keys foods [:protein :carbs :fat]))
-    (swap! log update-in [:stats] assoc :fluids (:servings fluids))))
+  (let [foods  (combine log :foods foods-by-id a/add-macros)
+        fluids (combine log :fluids fluids-by-id a/add-fluids)]
+    (when foods
+      (swap! log update-in [:stats :calories] assoc :in (:calories foods))
+      (swap! log update-in [:stats] assoc :macros (select-keys foods [:protein :carbs :fat])))
+
+    (when fluids
+      (swap! log update-in [:stats] assoc :fluids (:servings fluids)))))
 
 (add-watch
  foods ::food-updated

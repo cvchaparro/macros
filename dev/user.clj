@@ -2,6 +2,7 @@
   (:require
    [io.cvcf.macros.entrypoint :as e]
    [io.cvcf.macros.import.core :as i]
+   [io.cvcf.macros.new :as n]
    [io.cvcf.macros.store :as s]
    [tick.core :as t]))
 
@@ -31,7 +32,7 @@
 
   ;; Load today's log
   (-> (t/today)
-      e/make-log-fspec
+      n/make-log-fspec
       (i/handle-import s/log))
 
   ::end)

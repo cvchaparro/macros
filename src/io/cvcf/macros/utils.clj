@@ -59,3 +59,8 @@
   (let [r (or (io/resource f) (fs/file "resources" f))]
     (when-not (fs/exists? r) (spit r "[]"))
     r))
+
+(defn ensure-file-exists
+  [f]
+  (when-not (fs/exists? f)
+    (-> f fs/parent fs/create-dirs)))

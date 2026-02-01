@@ -1,5 +1,6 @@
 (ns io.cvcf.macros.new
   (:require
+   [babashka.fs :as fs]
    [clojure.string :as str]
    [io.cvcf.macros.defaults :as d]
    [io.cvcf.macros.utils :as u]
@@ -106,20 +107,32 @@
     :or   {id (random-uuid)}}]
   {:id id :tags (split-tags tags) :title title})
 
+(defn make-log-fspec
+  [date]
+  (doto (->> (str date)
+             (#(str/split % #"-"))
+             (into ["logs"])
+             (str/join fs/file-separator)
+             (#(str % ".edn")))
+    (u/ensure-file-exists)))
+
 (defn new-log
-  [{:keys [id title date sleep]
-    :or   {id   (random-uuid)
-           date (t/inst)}}]
-  {:id       id
-   :title    title
-   :date     date
-   :stats    {:calories {:in  (u/qty 0 d/default-calorie-unit)
-                         :out (u/qty 0 d/default-calorie-unit)}
-              :macros   {:protein (u/qty 0 d/default-macros-unit)
-                         :carbs   (u/qty 0 d/default-macros-unit)
-                         :fat     (u/qty 0 d/default-macros-unit)}
-              :fluids   (u/qty 0 d/default-fluids-unit)
-              :sleep    (u/->duration sleep)}
-   :foods    []
-   :fluids   []
-   :workouts []})
+  ([{:keys [date] :or {date (t/inst)} :as opts}]
+   (new-log (make-log-fspec date) opts))
+  ([f {:keys [id title date sleep]
+       :or   {id   (random-uuid)
+              date (t/inst)}}]
+   (u/ensure-file-exists f)
+   {:id       id
+    :title    title
+    :date     date
+    :stats    {:calories {:in  (u/qty 0 d/default-calorie-unit)
+                          :out (u/qty 0 d/default-calorie-unit)}
+               :macros   {:protein (u/qty 0 d/default-macros-unit)
+                          :carbs   (u/qty 0 d/default-macros-unit)
+                          :fat     (u/qty 0 d/default-macros-unit)}
+               :fluids   (u/qty 0 d/default-fluids-unit)
+               :sleep    (u/->duration sleep)}
+    :foods    []
+    :fluids   []
+    :workouts []}))

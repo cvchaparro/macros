@@ -1,8 +1,6 @@
 (ns io.cvcf.macros.entrypoint
   (:require
    [babashka.cli :as cli]
-   [babashka.fs :as fs]
-   [clojure.string :as str]
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.export :as e]
    [io.cvcf.macros.import.core :as i]
@@ -73,15 +71,6 @@
                     (swap! s/log update-in [:stats :calories] assoc :out calories)))
     :spec       l/log-calories-spec}])
 
-(defn make-log-fspec
-  [date]
-  (doto (->> (str date)
-             (#(str/split % #"-"))
-             (into ["logs"])
-             (str/join fs/file-separator)
-             (#(str % ".edn")))
-    (#(-> % fs/parent fs/create-dirs))))
-
 (defmacro with-log
   [{:keys [foods-fspec fluids-fspec workouts-fspec date]
     :or   {foods-fspec    s/*foods-file*
@@ -92,13 +81,12 @@
   `(let [foods-fspec#    (u/new-resource ~foods-fspec)
          fluids-fspec#   (u/new-resource ~fluids-fspec)
          workouts-fspec# (u/new-resource ~workouts-fspec)
-         log-fspec#      (fs/file ~(make-log-fspec date))]
+         log-fspec#      ~(n/make-log-fspec date)]
      (try
        (i/handle-import foods-fspec# s/foods s/foods-imported?)
        (i/handle-import fluids-fspec# s/fluids s/fluids-imported?)
        (i/handle-import workouts-fspec# s/workouts s/workouts-imported?)
-
-       (reset! s/log (i/maybe-import log-fspec#))
+       (i/handle-import log-fspec# s/log)
 
        ~@body
 

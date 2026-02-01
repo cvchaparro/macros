@@ -13,12 +13,17 @@
          (filter identity))))
 
 (defn maybe-import
-  [f]
-  (when-let [[file] (seq (prepare {:opts {:files [f]}}))]
-    (import* file)))
+  [f {:keys [create?]}]
+  (if-let [[file] (seq (prepare {:opts {:files [f]}}))]
+    (import* file)
+    (if create?
+      (println "File not found:" f)
+      (do (-> f fs/parent fs/create-dirs)
+          (spit f "{}")
+          {}))))
 
 (defn handle-import
-  [f atom & {:keys [imported-flag?]}]
-  (reset! atom (maybe-import f))
+  [f atom & {:keys [imported-flag? create?]}]
+  (reset! atom (maybe-import f {:create? create?}))
   (when imported-flag?
     (reset! imported-flag? true)))
