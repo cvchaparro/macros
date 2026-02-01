@@ -22,3 +22,20 @@ will auto-calculate the number of servings instead of me having to do that math
 beforehand.
 
 A simple feature that adds good quality of life.
+
+* DONE Update food/fluid/workout that's already logged
+CLOSED: [2026-02-01 Sun 15:50]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-01 Sun 15:51
+:ARCHIVE_FILE: ~/git/cvcf/macros/TODOs.org
+:ARCHIVE_CATEGORY: macros
+:ARCHIVE_TODO: DONE
+:END:
+
+- Note taken on [2026-02-01 Sun 15:01] \\
+  Switching to keeping this as-is and just adding a timestamp to the log so that I
+  can see when I've had (or, at least, logged having) a food/fluid.
+
+If I have a cup of tea, I should be able to log it. If I have another cup later
+in the day, I should be able to log that, too, and the system should just update
+the servings for the original tea entry. Same with foods.
