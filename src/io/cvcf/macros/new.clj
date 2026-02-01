@@ -64,14 +64,16 @@
       (update-vals #(u/replace-value % :desc #"food" "workout"))))
 
 (def new-log-spec
-  {:title {:desc    "The log title."
-           :alias   :t
-           :require true
-           :default (str (t/date))}
-   :sleep {:desc    "The sleep duration."
-           :alias   :s
-           :require true
-           :validate u/valid-duration?}})
+  {:title {:desc     "The log title."
+           :alias    :t
+           :require  true
+           :default  (str (t/today))}
+   :sleep {:desc     "The sleep duration."
+           :alias    :s
+           :require  true
+           :validate u/valid-duration?}
+   :date  {:desc     "The date of the log."
+           :alias    :d}})
 
 (defn split-tags
   [tags]
@@ -117,22 +119,22 @@
     (u/ensure-file-exists)))
 
 (defn new-log
-  ([{:keys [date] :or {date (t/inst)} :as opts}]
-   (new-log (make-log-fspec date) opts))
-  ([f {:keys [id title date sleep]
-       :or   {id   (random-uuid)
-              date (t/inst)}}]
-   (u/ensure-file-exists f)
-   {:id       id
-    :title    title
-    :date     date
-    :stats    {:calories {:in  (u/qty 0 d/default-calorie-unit)
-                          :out (u/qty 0 d/default-calorie-unit)}
-               :macros   {:protein (u/qty 0 d/default-macros-unit)
-                          :carbs   (u/qty 0 d/default-macros-unit)
-                          :fat     (u/qty 0 d/default-macros-unit)}
-               :fluids   (u/qty 0 d/default-fluids-unit)
-               :sleep    (u/->duration sleep)}
-    :foods    []
-    :fluids   []
-    :workouts []}))
+  [{:keys [id title date sleep file]
+    :or   {id    (random-uuid)
+           date  (t/inst)
+           file  (make-log-fspec (t/today))
+           title (str (t/today))}}]
+  (u/ensure-file-exists file)
+  {:id       id
+   :title    title
+   :date     date
+   :stats    {:calories {:in  (u/qty 0 d/default-calorie-unit)
+                         :out (u/qty 0 d/default-calorie-unit)}
+              :macros   {:protein (u/qty 0 d/default-macros-unit)
+                         :carbs   (u/qty 0 d/default-macros-unit)
+                         :fat     (u/qty 0 d/default-macros-unit)}
+              :fluids   (u/qty 0 d/default-fluids-unit)
+              :sleep    (u/->duration sleep)}
+   :foods    []
+   :fluids   []
+   :workouts []})

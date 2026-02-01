@@ -1,7 +1,8 @@
 (ns io.cvcf.macros.import.core
   (:require
    [babashka.fs :as fs]
-   [clojure.java.io :as io]))
+   [clojure.java.io :as io]
+   [io.cvcf.macros.utils :as u]))
 
 (defmulti import* fs/extension)
 
@@ -16,11 +17,10 @@
   [f {:keys [create?]}]
   (if-let [[file] (seq (prepare {:opts {:files [f]}}))]
     (import* file)
-    (if create?
-      (println "File not found:" f)
-      (do (-> f fs/parent fs/create-dirs)
-          (spit f "{}")
-          {}))))
+    (when create?
+      (u/ensure-file-exists f)
+      (spit f "{}")
+      {})))
 
 (defn handle-import
   [f atom & {:keys [imported-flag? create?]}]

@@ -46,7 +46,8 @@
    {:cmds       ["new" "log"]
     :fn         (fn [{:keys [opts]}]
                   (reset! s/log (n/new-log opts)))
-    :spec       n/new-log-spec}
+    :spec       n/new-log-spec
+    :args->opts [:file]}
    {:cmds       ["log" "food"]
     :fn         (fn [{:keys [opts]}]
                   (let [[food & others] (l/log-food opts)]
@@ -86,7 +87,7 @@
        (i/handle-import foods-fspec# s/foods s/foods-imported?)
        (i/handle-import fluids-fspec# s/fluids s/fluids-imported?)
        (i/handle-import workouts-fspec# s/workouts s/workouts-imported?)
-       (i/handle-import log-fspec# s/log)
+       (i/handle-import log-fspec# s/log {:create? true})
 
        ~@body
 

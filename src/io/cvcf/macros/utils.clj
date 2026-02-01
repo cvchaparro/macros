@@ -63,4 +63,6 @@
 (defn ensure-file-exists
   [f]
   (when-not (fs/exists? f)
-    (-> f fs/parent fs/create-dirs)))
+    (println "File does not exist. Creating:" f)
+    (-> f fs/parent fs/create-dirs)
+    f))
