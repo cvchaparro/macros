@@ -61,6 +61,11 @@
       (update-vals #(u/replace-value % :desc #"food" "fluid"))
       (assoc-in [:serving-unit :default] default-fluids-unit)))
 
+(def new-workout-spec
+  (-> new-food-spec
+      (select-keys [:title :tags])
+      (update-vals #(u/replace-value % :desc #"food" "workout"))))
+
 (def new-log-spec
   {:title {:desc    "The log title."
            :alias   :t
@@ -99,6 +104,11 @@
     :or   {id (random-uuid) serving-unit default-fluids-unit}}]
   {:id id :tags (split-tags tags) :title title
    :servings (u/qty serving-size serving-unit)})
+
+(defn new-workout
+  [{:keys [id title tags]
+    :or   {id (random-uuid)}}]
+  {:id id :tags (split-tags tags) :title title})
 
 (defn new-log
   [{:keys [id title date sleep]

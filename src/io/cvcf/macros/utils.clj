@@ -1,5 +1,7 @@
 (ns io.cvcf.macros.utils
   (:require
+   [babashka.fs :as fs]
+   [clojure.java.io :as io]
    [clojure.string :as str]
    [tick.core :as t]))
 
@@ -51,3 +53,9 @@
 (defn replace-value
   [m k match replacement]
   (assoc m k (str/replace (k m) match replacement)))
+
+(defn new-resource
+  [f]
+  (let [r (or (io/resource f) (fs/file "resources" f))]
+    (when-not (fs/exists? r) (spit r "[]"))
+    r))

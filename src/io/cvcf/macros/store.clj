@@ -3,27 +3,33 @@
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.utils :as u]))
 
-(def ^:dynamic *foods-file*  "foods.edn")
-(def ^:dynamic *fluids-file* "fluids.edn")
+(def ^:dynamic *foods-file*    "foods.edn")
+(def ^:dynamic *fluids-file*   "fluids.edn")
+(def ^:dynamic *workouts-file* "workouts.edn")
 
 ;; TODO: Explore making this metadata instead of different variables
-(def foods-imported?  (atom false))
-(def fluids-imported? (atom false))
-(def foods-changed?   (atom false))
-(def fluids-changed?  (atom false))
+(def foods-imported?    (atom false))
+(def fluids-imported?   (atom false))
+(def workouts-imported? (atom false))
+(def foods-changed?     (atom false))
+(def fluids-changed?    (atom false))
+(def workouts-changed?  (atom false))
 
-(def foods  (atom nil))
-(def fluids (atom nil))
-(def log    (atom nil))
+(def foods    (atom nil))
+(def fluids   (atom nil))
+(def workouts (atom nil))
+(def log      (atom nil))
 
 (defn by
   [a key-fn]
   (into {} (map (juxt key-fn identity) @a)))
 
-(defn foods-by-id     [] (by foods (comp str :id)))
-(defn fluids-by-id    [] (by fluids (comp str :id)))
-(defn foods-by-title  [] (by foods :title))
-(defn fluids-by-title [] (by fluids :title))
+(defn foods-by-id       [] (by foods (comp str :id)))
+(defn fluids-by-id      [] (by fluids (comp str :id)))
+(defn workouts-by-id    [] (by workouts (comp str :id)))
+(defn foods-by-title    [] (by foods :title))
+(defn fluids-by-title   [] (by fluids :title))
+(defn workouts-by-title [] (by workouts :title))
 
 (defn print-food
   [{:keys [title servings calories protein carbs fat]}]
@@ -71,3 +77,9 @@
  (fn [_ _ _ _]
    (when (and @fluids-imported? (not @fluids-changed?))
      (reset! fluids-changed? true))))
+
+(add-watch
+ workouts ::workout-updated
+ (fn [_ _ _ _]
+   (when (and @workouts-imported? (not @workouts-changed?))
+     (reset! workouts-changed? true))))

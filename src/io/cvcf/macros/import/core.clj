@@ -16,3 +16,9 @@
   [f]
   (when-let [[file] (seq (prepare {:opts {:files [f]}}))]
     (import* file)))
+
+(defn handle-import
+  [f atom & {:keys [imported-flag?]}]
+  (reset! atom (maybe-import f))
+  (when imported-flag?
+    (reset! imported-flag? true)))
