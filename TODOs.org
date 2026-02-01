@@ -1,0 +1,52 @@
+:PROPERTIES:
+:CATEGORY: macros
+:END:
+
+* TODO Don't duplicate food/fluid/etc items in data files
+
+This also means making sure that ids for items are always unique.
+
+* TODO Add foods/fluids by units instead of just servings
+
+Some servings are easy to add (e.g. if I have 1/2 a serving, I can just pass "-s
+0.5" and that's actually required, right now) but what if I have 70g and the
+serving size is 32g.
+
+This feature would allow me to say (e.g.) "log food -t whatever -u 70" and it
+will auto-calculate the number of servings instead of me having to do that math
+beforehand.
+
+A simple feature that adds good quality of life.
+
+* TODO Remove food/fluid/workout items that have already been logged
+
+There needs to be a way to remove food/fluid/workout items from the log.
+
+* TODO Update food/fluid/workout that's already logged
+
+If I have a cup of tea, I should be able to log it. If I have another cup later
+in the day, I should be able to log that, too, and the system should just update
+the servings for the original tea entry. Same with foods.
+
+Workouts are a bit different. If I workout, I should be able to add sets later
+on (especially with GtG-style workouts).
+
+* TODO Modify workouts so that they're actually workouts
+
+Currently, workout logging favors a grease-the-groove approach but I do full
+workouts, too, that should be accounted for appropriately. Figure out how to
+track both appropriately.
+
+* TODO Remove items (foods, fluids, workouts, etc)
+
+* TODO Explore using metadata instead of different variables
+
+Now that we're tracking multiple things, there are several flags that we use to
+determine whether or not to save data (e.g. no need to save if something hasn't
+changed).
+
+Perhaps we could use metadata on the atom that holds the actual data instead of
+separate variables to handle this?
+
+I've never really used it so I don't know how metadata works, right now. Figure
+it out and see if it makes sense as a solution.

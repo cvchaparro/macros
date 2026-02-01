@@ -8,7 +8,6 @@
 (def ^:dynamic *fluids-file*   "fluids.edn")
 (def ^:dynamic *workouts-file* "workouts.edn")
 
-;; TODO: Explore making this metadata instead of different variables
 (def foods-imported?    (atom false))
 (def fluids-imported?   (atom false))
 (def workouts-imported? (atom false))
