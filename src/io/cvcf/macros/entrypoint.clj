@@ -66,7 +66,12 @@
                   (let [[workout & others] (l/log-workout opts)]
                     (when-not others
                       (swap! s/log update :workouts conj workout))))
-    :spec       l/log-workout-spec}])
+    :spec       l/log-workout-spec}
+   {:cmds       ["log" "cals"]
+    :fn         (fn [{:keys [opts]}]
+                  (when-let [calories (l/log-calories opts)]
+                    (swap! s/log update-in [:stats :calories] assoc :out calories)))
+    :spec       l/log-calories-spec}])
 
 (defn make-log-fspec
   [date]

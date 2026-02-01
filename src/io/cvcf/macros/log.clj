@@ -1,6 +1,7 @@
 (ns io.cvcf.macros.log
   (:require
    [clojure.string :as str]
+   [io.cvcf.macros.defaults :as d]
    [io.cvcf.macros.store :as s]
    [io.cvcf.macros.utils :as u])
   (:import
@@ -50,6 +51,16 @@
    :tags         {:desc     "Tag(s) associated with the food."
                   :coerce   []
                   :default  []}})
+
+(def log-calories-spec
+  {:cals  {:desc    "The calories burnt."
+           :alias   :c
+           :coerce  :double
+           :require true}
+   :units {:desc    "The calorie units."
+           :alias   :u
+           :require true
+           :default d/default-calorie-unit}})
 
 (defn find*
   [{:keys [title id query by-id by-title]}]
@@ -111,3 +122,7 @@
                                    {:duration set-duration}))
                          reps))
       (log* find-workout s/print-workout [:sets :duration :set-duration])))
+
+(defn log-calories
+  [{:keys [cals units] :or {units d/default-calorie-unit}}]
+  (u/qty cals units))
