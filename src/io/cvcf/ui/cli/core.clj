@@ -19,9 +19,9 @@
          workouts-fspec# (u/new-resource ~workouts-fspec)
          log-fspec#      ~(n/make-log-fspec date)]
      (try
-       (i/handle-import foods-fspec# s/foods s/foods-imported?)
-       (i/handle-import fluids-fspec# s/fluids s/fluids-imported?)
-       (i/handle-import workouts-fspec# s/workouts s/workouts-imported?)
+       (i/handle-import foods-fspec# s/foods {:imported-flag? s/foods-imported?})
+       (i/handle-import fluids-fspec# s/fluids {:imported-flag? s/fluids-imported?})
+       (i/handle-import workouts-fspec# s/workouts {:imported-flag? s/workouts-imported?})
        (i/handle-import log-fspec# s/log {:create? true})
 
        ~@body
