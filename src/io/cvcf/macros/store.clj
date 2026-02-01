@@ -1,5 +1,6 @@
 (ns io.cvcf.macros.store
   (:require
+   [clojure.string :as str]
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.utils :as u]))
 
@@ -51,6 +52,15 @@
                      title
                      (* servings (u/amt ss))
                      (name (u/units ss))))))
+
+(defn print-workout
+  [{:keys [title sets] :as opts}]
+  (println (str title ":"))
+  (vec
+   (map-indexed (fn [i {:keys [reps duration]}]
+                  (let [duration (if duration (str/replace (u/->duration duration) #"PT" " in ") "")]
+                    (println (format "set %d: %d reps%s" (inc i) reps duration))))
+                sets)))
 
 (defn combine
   [k by-id adder]

@@ -60,7 +60,13 @@
                   (let [[fluid & others] (l/log-fluid opts)]
                     (when-not others
                       (swap! s/log update :fluids conj fluid))))
-    :spec       l/log-fluid-spec}])
+    :spec       l/log-fluid-spec}
+   {:cmds       ["log" "workout"]
+    :fn         (fn [{:keys [opts]}]
+                  (let [[workout & others] (l/log-workout opts)]
+                    (when-not others
+                      (swap! s/log update :workouts conj workout))))
+    :spec       l/log-workout-spec}])
 
 (defn make-log-fspec
   [date]

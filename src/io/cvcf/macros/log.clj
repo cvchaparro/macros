@@ -26,6 +26,31 @@
   (-> log-food-spec
       (update-vals #(u/replace-value % :desc #"food" "fluid"))))
 
+(def log-workout-spec
+  {:title        {:desc     "The workout title."
+                  :alias    :t
+                  :restrict [:id :query]}
+   :id           {:desc     "The workout id."
+                  :alias    :i
+                  :restrict [:title :query]}
+   :query        {:desc  "Search for a substring of the title."
+                  :alias :q
+                  :restrict [:title :id]}
+   :duration     {:desc     "The duration spent doing the exercise."
+                  :alias    :d
+                  :validate u/valid-duration?}
+   :set-duration {:desc     "The duration spent doing the set."
+                  :alias    :sd
+                  :validate u/valid-duration?}
+   :sets         {:desc     "The number of sets."
+                  :alias    :s}
+   :reps         {:desc     "The number of reps in at least one set."
+                  :alias    :r
+                  :coerce   [:int]}
+   :tags         {:desc     "Tag(s) associated with the food."
+                  :coerce   []
+                  :default  []}})
+
 (defn find*
   [{:keys [title id query by-id by-title]}]
   (cond
@@ -38,7 +63,7 @@
            (map #(get by-title %))))))
 
 (defn log*
-  [{:keys [servings] :as opts} finder printer]
+  [opts finder printer ks]
   (let [[i & others] (finder opts)]
     (cond
       others
@@ -50,9 +75,10 @@
           (into [i] others))
 
       i
-      (let [{:keys [id title]} i]
-        (printer (merge i {:servings servings}))
-        [{:id id :title title :servings servings}])
+      (let [{:keys [id title]} i
+            selected (select-keys opts ks)]
+        (printer (merge i selected))
+        [(merge {:id id :title title} selected)])
 
       :else
       (println "Not found. Nothing logged."))))
@@ -63,7 +89,7 @@
 
 (defn log-food
   [{:keys [servings] :as opts}]
-  (log* opts find-food s/print-food))
+  (log* opts find-food s/print-food [:servings]))
 
 (defn find-fluid
   [opts]
@@ -71,4 +97,17 @@
 
 (defn log-fluid
   [{:keys [servings] :as opts}]
-  (log* opts find-fluid s/print-fluid))
+  (log* opts find-fluid s/print-fluid [:servings]))
+
+(defn find-workout
+  [opts]
+  (find* (merge opts {:by-id (s/workouts-by-id) :by-title (s/workouts-by-title)})))
+
+(defn log-workout
+  [{:keys [sets reps duration set-duration] :as opts}]
+  (-> opts
+      (assoc :sets (mapv #(merge {:reps %}
+                                 (when set-duration
+                                   {:duration set-duration}))
+                         reps))
+      (log* find-workout s/print-workout [:sets :duration :set-duration])))
