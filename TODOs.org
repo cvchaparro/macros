@@ -50,3 +50,12 @@ separate variables to handle this?
 
 I've never really used it so I don't know how metadata works, right now. Figure
 it out and see if it makes sense as a solution.
+
+* TODO Allow working on logs from different days
+
+I want to be able to modify a log from (e.g.) yesterday and add final calories,
+fluids, etc. This means I should be able to change a log for a different day.
+Currently, the app will overwrite today's log with any changes because
+~with-log~ will set the log file to the current date.
+
+There needs to be a way to specify the log file before making changes, etc.
