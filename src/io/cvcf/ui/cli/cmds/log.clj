@@ -1,14 +1,15 @@
 (ns io.cvcf.ui.cli.cmds.log
   (:require
    [io.cvcf.macros.log :as l]
-   [io.cvcf.macros.store :as s]))
+   [io.cvcf.macros.store :as s]
+   [tick.core :as t]))
 
 (defn log-item
   [ks items]
   (let [[i & others] items
         ks (if (coll? ks) ks [ks])]
     (when-not others
-      (swap! s/log update-in ks conj i))))
+      (swap! s/log update-in ks conj (merge i {:at (t/inst)})))))
 
 (defn apply-with-opts
   [f {:keys [opts]}]
