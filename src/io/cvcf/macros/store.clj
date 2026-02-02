@@ -67,7 +67,7 @@
     (->> items
          (map #(assoc (get (by-id) ((comp str :id) %))
                       :n (u/qty (:servings %) :serving)))
-         (reduce adder))))
+         (#(if (> (count %) 1) (reduce adder %) (adder (first %)))))))
 
 (defn update-stats
   []
