@@ -1959,4 +1959,12 @@
   :protein  {:amount 1.0 :units :g}
   :carbs    {:amount 3.0 :units :g}
   :fat      {:amount 0.0 :units :g}
-  :tags     [:fibrous-carb :vegetable :canned :mm]}]
+  :tags     [:fibrous-carb :vegetable :canned :mm]}
+ {:id       #uuid "f8b0958c-cdd8-4a29-a785-04cb2160d02a"
+  :title    "Extra Long Lasting Flavor Polar Ice Gum"
+  :servings {:amount 2.5 :units :g}
+  :calories {:amount 5.0 :units :kcal}
+  :protein  {:amount 0.0 :units :g}
+  :carbs    {:amount 2.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     [:gum]}]
