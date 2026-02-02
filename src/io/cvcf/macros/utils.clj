@@ -22,18 +22,19 @@
 
 (defn valid-duration?
   [s]
-  (->> (clojure.string/split s #":")
-       (zipmap [:h :m])
-       (map #(when-let [[k v] %]
-               (and (= v (re-find #"[0-9]{1,2}" v))
-                    [k (parse-long v)])))
-       (map #(when-let [[k v] %]
-               (cond (and (= k :h) (<= 10 v 23)) (str v)
-                     (and (= k :m) (<= 10 v 59)) (str v)
-                     (<= 0 v 9)                  (str "0" v))))
-       (take-while identity)
-       (#(and (= 2 (count %))
-              (str/join ":" %)))))
+  (when (and s (seq s))
+    (->> (clojure.string/split s #":")
+         (zipmap [:h :m :s])
+         (map #(when-let [[k v] %]
+                 (and (= v (re-find #"[0-9]{1,2}" v))
+                      [k (parse-long v)])))
+         (map #(when-let [[k v] %]
+                 (cond (and (= k :h)     (<= 10 v 23)) (str v)
+                       (and (#{:m :s} k) (<= 10 v 59)) (str v)
+                       (<= 0 v 9)                  (str "0" v))))
+         (take-while identity)
+         (#(and (<= 2 (count %) 3)
+                (str/join ":" %))))))
 
 (defn ->duration
   [x]
