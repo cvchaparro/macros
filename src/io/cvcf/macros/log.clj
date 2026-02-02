@@ -7,64 +7,6 @@
   (:import
    (java.util.regex Pattern)))
 
-(def log-food-spec
-  {:title    {:desc  "The food title."
-              :alias :t
-              :restrict [:id :query]}
-   :id       {:desc  "The food id."
-              :alias :i
-              :restrict [:title :query]}
-   :query    {:desc  "Search for a substring of the title."
-              :alias :q
-              :restrict [:title :id]}
-   :servings {:desc     "The number of servings consumed."
-              :alias    :s
-              :coerce   :double
-              :restrict [:units]}
-   :units    {:desc     "The number of units consumed."
-              :alias    :u
-              :coerce   :double
-              :restrict [:servings]}})
-
-(def log-fluid-spec
-  (-> log-food-spec
-      (update-vals #(u/replace-value % :desc #"food" "fluid"))))
-
-(def log-workout-spec
-  {:title        {:desc     "The workout title."
-                  :alias    :t
-                  :restrict [:id :query]}
-   :id           {:desc     "The workout id."
-                  :alias    :i
-                  :restrict [:title :query]}
-   :query        {:desc     "Search for a substring of the title."
-                  :alias    :q
-                  :restrict [:title :id]}
-   :duration     {:desc     "The duration spent doing the exercise."
-                  :alias    :d
-                  :validate u/valid-duration?}
-   :set-duration {:desc     "The duration spent doing the set."
-                  :alias    :sd
-                  :validate u/valid-duration?}
-   :sets         {:desc     "The number of sets."
-                  :alias    :s}
-   :reps         {:desc     "The number of reps in at least one set."
-                  :alias    :r
-                  :coerce   [:int]}
-   :tags         {:desc     "Tag(s) associated with the workout."
-                  :coerce   []
-                  :default  []}})
-
-(def log-calories-spec
-  {:cals  {:desc    "The calories burnt."
-           :alias   :c
-           :coerce  :double
-           :require true}
-   :units {:desc    "The calorie units."
-           :alias   :u
-           :require true
-           :default d/default-calorie-unit}})
-
 (defn find*
   [{:keys [title id query by-id by-title]}]
   (cond
