@@ -1943,4 +1943,20 @@
   :protein  {:amount 15.0 :units :g}
   :carbs    {:amount 0.0 :units :g}
   :fat      {:amount 18.0 :units :g}
-  :tags     [:fish :fat :king-oscar :canned]}]
+  :tags     [:fish :fat :king-oscar :canned]}
+ {:id       #uuid "959d0409-9ec5-42c8-9f70-bfed8bf26143"
+  :title    "Butterfield Farms Roast Beef"
+  :servings {:amount 70.0 :units :g}
+  :calories {:amount 70.0 :units :kcal}
+  :protein  {:amount 13.0 :units :g}
+  :carbs    {:amount 0.0 :units :g}
+  :fat      {:amount 1.5 :units :g}
+  :tags     [:beef :meat :protein :canned]}
+ {:id       #uuid "7c87b34a-05ce-489b-a86d-fe5fa8a9f68b"
+  :title    "MM Cut Green Beans w/ Sea Salt"
+  :servings {:amount 120.0 :units :g}
+  :calories {:amount 15.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 3.0 :units :g}
+  :fat      {:amount 0.0 :units :g}
+  :tags     [:fibrous-carb :vegetable :canned :mm]}]
