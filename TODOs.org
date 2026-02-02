@@ -10,10 +10,29 @@ This also means making sure that ids for items are always unique.
 
 There needs to be a way to remove food/fluid/workout items from the log.
 
-* TODO Update workouts instead of adding new records
+* TODO Update how workouts are handled
+
+- Note taken on [2026-02-01 Sun 21:54] \\
+  This is going to be quite a bit more involved than I expected. I need to find a
+  way to record a workout with several exercises, potentially different
+  sets/reps/durations/etc for each exercise, etc. and this doesn't lend itself
+  super well to a CLI without having a command where I need (e.g.) to pass 50
+  flags and each one depends on previous ones and so on.
+
+  Couple ideas I've had today to handle this:
+  - have an interactive way to log a workout from the CLI
+  - put the workout data into a file (JSON, CSV, EDN, etc) and ingest that workout
+    file to get the workout data
 
 Workouts are a bit different. If I workout, I should be able to add sets later
 on (especially with GtG-style workouts).
+
+* TODO Add a report command
+
+Now that we're logging basically everything, we need a report command that shows
+all the logged data in a user-friendly way on the CLI.
+
+Should take inspiration from the spreadsheet "report" that I have.
 
 * TODO Modify workouts so that they're actually workouts
 
