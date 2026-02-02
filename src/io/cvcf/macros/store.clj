@@ -31,36 +31,6 @@
 (defn fluids-by-title   [] (by fluids :title))
 (defn workouts-by-title [] (by workouts :title))
 
-(defn print-food
-  [{:keys [title servings calories protein carbs fat]}]
-  (println (format "%s: %.1f %s (%.1f%s p, %.1f%s c, %.1f%s f)"
-                   title
-                   (* servings (u/amt calories))
-                   (name (u/units calories))
-                   (* servings (u/amt protein))
-                   (name (u/units protein))
-                   (* servings (u/amt carbs))
-                   (name (u/units carbs))
-                   (* servings (u/amt fat))
-                   (name (u/units fat)))))
-
-(defn print-fluid
-  [{:keys [title servings]}]
-  (let [ss (get-in (fluids-by-title) [title :servings])]
-    (println (format "%s: %.1f %s"
-                     title
-                     (* servings (u/amt ss))
-                     (name (u/units ss))))))
-
-(defn print-workout
-  [{:keys [title sets]}]
-  (println (str title ":"))
-  (vec
-   (map-indexed (fn [i {:keys [reps duration]}]
-                  (let [duration (if duration (str/replace (u/->duration duration) #"PT" " in ") "")]
-                    (println (format "set %d: %d reps%s" (inc i) reps duration))))
-                sets)))
-
 (defn combine
   [atom k by-id adder]
   (when-let [items (seq (k @atom))]

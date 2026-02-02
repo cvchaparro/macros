@@ -2,6 +2,7 @@
   (:require
    [clojure.string :as str]
    [io.cvcf.macros.defaults :as d]
+   [io.cvcf.macros.report :as r]
    [io.cvcf.macros.store :as s]
    [io.cvcf.macros.utils :as u])
   (:import
@@ -52,7 +53,7 @@
 (defn log-food
   [{:keys [servings] :as opts}]
   (let [opts (assoc opts :servings (or servings (units->servings opts find-food)))]
-    (log* opts find-food s/print-food [:servings])))
+    (log* opts find-food r/print-food [:servings])))
 
 (defn find-fluid
   [opts]
@@ -61,7 +62,7 @@
 (defn log-fluid
   [{:keys [servings] :as opts}]
   (let [opts (assoc opts :servings (or servings (units->servings opts find-fluid)))]
-    (log* opts find-fluid s/print-fluid [:servings])))
+    (log* opts find-fluid r/print-fluid [:servings])))
 
 (defn find-workout
   [opts]
@@ -74,7 +75,7 @@
                                  (when set-duration
                                    {:duration set-duration}))
                          reps))
-      (log* find-workout s/print-workout [:sets :duration :set-duration])))
+      (log* find-workout r/print-workout [:sets :duration :set-duration])))
 
 (defn log-calories
   [{:keys [cals units] :or {units d/default-calorie-unit}}]
