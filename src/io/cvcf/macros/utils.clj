@@ -66,3 +66,13 @@
     (println "File does not exist. Creating:" f)
     (-> f fs/parent fs/create-dirs)
     f))
+
+(defn timestamp?
+  [x]
+  (some-fn
+   inst?
+   t/instant?
+   t/time?
+   t/date-time?
+   t/offset-date-time?
+   t/zoned-date-time?))

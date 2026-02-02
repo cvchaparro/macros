@@ -6,6 +6,29 @@
    [io.cvcf.macros.store :as s]
    [tick.core :as t]))
 
+(defn refresh-data
+  [& {:keys [foods-fspec fluids-fspec workouts-fspec log-fspec
+             foods fluids workouts log]
+      :or   {foods-fspec s/*foods-file*
+             fluids-fspec s/*fluids-file*
+             workouts-fspec s/*workouts-file*
+             log-fspec (n/make-log-fspec (t/today))
+             foods s/foods
+             fluids s/fluids
+             workouts s/workouts
+             log s/log}}]
+  ;; Reload the foods
+  (i/handle-import foods-fspec foods)
+
+  ;; Reload the fluids
+  (i/handle-import fluids-fspec fluids)
+
+  ;; Reload the workouts
+  (i/handle-import workouts-fspec workouts)
+
+  ;; Load today's log
+  (i/handle-import log-fspec log))
+
 (comment
   (e/-main "import" "foods" "foods.csv" "crap.csv")
   (e/-main "import" "foods" "foods.edn")
@@ -24,18 +47,6 @@
 
   (s/update-stats)
 
-  ;; Reload the foods
-  (i/handle-import s/*foods-file* s/foods)
-
-  ;; Reload the fluids
-  (i/handle-import s/*fluids-file* s/fluids)
-
-  ;; Reload the workouts
-  (i/handle-import s/*workouts-file* s/workouts)
-
-  ;; Load today's log
-  (-> (t/today)
-      n/make-log-fspec
-      (i/handle-import s/log))
+  (refresh-data)
 
   ::end)

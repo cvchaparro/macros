@@ -26,4 +26,5 @@
   [f atom & {:keys [imported-flag? create?]}]
   (reset! atom (maybe-import f {:create? create?}))
   (when imported-flag?
-    (reset! imported-flag? true)))
+    (reset! imported-flag? true))
+  ::imported)
