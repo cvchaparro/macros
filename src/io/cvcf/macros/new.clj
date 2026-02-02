@@ -61,7 +61,27 @@
 (def new-workout-spec
   (-> new-food-spec
       (select-keys [:title :tags])
+      (assoc :exercises
+             {:desc    "A list of exercises performed in the workout."
+              :alias   :e
+              :coerce  []
+              :default []})
       (update-vals #(u/replace-value % :desc #"food" "workout"))))
+
+(def new-exercise-spec
+  (-> new-food-spec
+      (select-keys [:title :tags])
+      (assoc :muscle-groups
+             {:desc    "A list of muscle groups worked during the exercise."
+              :alias   :m
+              :coerce  []
+              :default []})
+      (assoc :equipment
+             {:desc    "A list of equipment required to perform the exercise."
+              :alias   :e
+              :coerce  []
+              :default []})
+      (update-vals #(u/replace-value % :desc #"food" "exercise"))))
 
 (def new-log-spec
   {:title {:desc     "The log title."
@@ -105,10 +125,19 @@
   {:id id :tags (split-tags tags) :title title
    :servings (u/qty serving-size serving-unit)})
 
-(defn new-workout
-  [{:keys [id title tags]
+(defn new-exercise
+  [{:keys [id title tags muscle-groups equipment]
     :or   {id (random-uuid)}}]
-  {:id id :tags (split-tags tags) :title title})
+  {:id id :tags (split-tags tags) :title title
+   :muscle-groups (split-tags muscle-groups)
+   :equipment (split-tags equipment)})
+
+(defn new-workout
+  [{:keys [id title exercises tags]
+    :or   {id    (random-uuid)
+           title (str "Workout: " (t/today))}}]
+  {:id id :tags (split-tags tags) :title title
+   :exercises []})
 
 (defn make-log-fspec
   [date]
