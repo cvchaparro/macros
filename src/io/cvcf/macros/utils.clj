@@ -48,8 +48,8 @@
   [amount units]
   {:amount (->double amount) :units (->keyword units)})
 
-(defn amt   [{:keys [amount]}] amount)
-(defn units [{:keys [units]}]  units)
+(defn amt   [x] (if (map? x) (:amount x) x))
+(defn units [x] (if (map? x) (:units x) x))
 
 (defn replace-value
   [m k match replacement]
