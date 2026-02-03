@@ -15,12 +15,12 @@
 
 (defn maybe-import
   [f {:keys [create?]}]
-  (if-let [[file] (seq (prepare {:opts {:files [f]}}))]
-    (import* file)
+  (let [[file] (seq (prepare {:opts {:files [f]}}))
+        d (if file (import* file) {})]
     (when create?
       (u/ensure-file-exists f)
-      (spit f "{}")
-      {})))
+      (spit f d))
+    d))
 
 (defn handle-import
   [f atom & {:keys [imported-flag? create?]}]
