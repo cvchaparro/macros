@@ -54,12 +54,16 @@
                      (name (u/units ss))))))
 
 (defn print-workout
-  [{:keys [title sets]}]
-  (println (str title ":"))
-  (vec
-   (map-indexed (fn [i {:keys [reps duration]}]
-                  (println (format "set %d: %d reps%s" (inc i) reps (print-duration duration))))
-                sets)))
+  [{:keys [sets]} {:keys [title]}]
+  (println title)
+  (comment
+    (vec
+     (map-indexed (fn [i {:keys [reps duration]}]
+                    (println (format "set %d: %d reps%s"
+                                     (inc i)
+                                     reps
+                                     (print-duration duration))))
+                  sets))))
 
 (def showable-data #{:all :foods :fluids :workouts :stats})
 
@@ -92,12 +96,30 @@
   (when (seq entries)
     (println (str "\n" title ":"))
     (doseq [entry entries]
-      (print (str "- (" (t/format "HH:mm:ss" (t/date-time (:at entry))) "): "))
+      (when-let [at (:at entry)]
+        (print (str "- ("
+                    (t/format "HH:mm:ss" (t/date-time at))
+                    "): ")))
       (let [[e] (finder entry)]
         (printer e entry)))
-    (->> (s/combine entries by-id adder)
-         totaler
-         (println "\n=> Totals:"))))
+    (when adder
+      (->> (s/combine entries by-id adder)
+           totaler
+           (println "\n=> Totals:")))))
+
+(defn print-stats
+  [{:keys [calories sleep]}]
+  (let [{:keys [in out]} calories]
+    (println (format (str/join "\n=> "
+                               ["\nStats:"
+                                "Sleep: %s"
+                                "Calories in : %.1f %s"
+                                "Calories out: %.1f %s"
+                                "Deficit/Surplus: %.1f %s"])
+                     (print-duration sleep)
+                     (u/amt in) (name (u/units in))
+                     (u/amt out) (name (u/units out))
+                     (u/amt (a/minus in out)) (name (u/units out))))))
 
 (defn show-day
   [{:keys [day show] :or {day "today" show [:all]}}]
@@ -124,4 +146,10 @@
                            :printer print-fluid
                            :adder a/add-fluids
                            :by-id s/fluids-by-id
-                           :totaler print-total-fluids})))
+                           :totaler print-total-fluids})
+    (print-logged-entries workouts
+                          {:title "Workouts"
+                           :finder f/find-workout
+                           :printer print-workout
+                           :by-id s/workouts-by-id})
+    (print-stats stats)))

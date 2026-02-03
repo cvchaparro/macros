@@ -17,6 +17,11 @@
   ([x y]        (u/qty (+ (u/amt x) (u/amt y)) (u/units y)))
   ([x y & more] (reduce plus (into [x y] more))))
 
+(defn minus
+  ([x]          (u/qty (u/amt (- x)) (u/units x)))
+  ([x y]        (u/qty (- (u/amt x) (u/amt y)) (u/units y)))
+  ([x y & more] (reduce minus (into [x y] more))))
+
 (defn create-identity
   [& {:keys [mks aks]}]
   (->> [(map #(into {% multiplicative-identity}) mks)
