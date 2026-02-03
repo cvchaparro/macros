@@ -78,3 +78,7 @@
     t/offset-date-time?
     t/zoned-date-time?)
    x))
+
+(defn time-or-date?
+  [x]
+  ((some-fn timestamp? t/date?) x))
