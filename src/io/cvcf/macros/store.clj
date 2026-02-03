@@ -1,6 +1,5 @@
 (ns io.cvcf.macros.store
   (:require
-   [clojure.string :as str]
    [io.cvcf.macros.arithmetic :as a]
    [io.cvcf.macros.utils :as u]))
 
@@ -32,12 +31,14 @@
 (defn workouts-by-title [] (by workouts :title))
 
 (defn combine
-  [atom k by-id adder]
-  (when-let [items (seq (k @atom))]
-    (->> items
-         (map #(assoc (get (by-id) ((comp str :id) %))
-                      :n (u/qty (:servings %) :serving)))
-         (#(if (> (count %) 1) (reduce adder %) (adder (first %)))))))
+  ([items by-id adder]
+   (when (seq items)
+     (->> items
+          (map #(assoc (get (by-id) ((comp str :id) %))
+                       :n (u/qty (:servings %) :serving)))
+          (#(if (> (count %) 1) (reduce adder %) (adder (first %)))))))
+  ([atom k by-id adder]
+   (combine (k @atom) by-id adder)))
 
 (defn update-stats
   []
