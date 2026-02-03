@@ -1049,10 +1049,10 @@
   :tags     []}
  {:id       #uuid "e68746ba-5fa4-4dc0-be45-03ec9556e2ae"
   :title    "Red Onion"
-  :servings {:amount 197.0 :units :g}
-  :calories {:amount 87.0 :units :kcal}
-  :protein  {:amount 2.0 :units :g}
-  :carbs    {:amount 20.0 :units :g}
+  :servings {:amount 100.0 :units :g}
+  :calories {:amount 38.0 :units :kcal}
+  :protein  {:amount 1.0 :units :g}
+  :carbs    {:amount 10.0 :units :g}
   :fat      {:amount 0.0 :units :g}
   :tags     []}
  {:id       #uuid "46d48c1f-8e1a-4baf-92d9-b0f6811556d8"
