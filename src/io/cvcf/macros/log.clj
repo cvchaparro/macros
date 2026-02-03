@@ -20,7 +20,6 @@
       i
       (let [{:keys [id title]} i
             selected (select-keys opts ks)]
-        (println (merge {:id id :title title} selected))
         [(merge {:id id :title title} selected)])
 
       :else
