@@ -70,10 +70,11 @@
 
 (defn timestamp?
   [x]
-  (some-fn
-   inst?
-   t/instant?
-   t/time?
-   t/date-time?
-   t/offset-date-time?
-   t/zoned-date-time?))
+  ((some-fn
+    inst?
+    t/instant?
+    t/time?
+    t/date-time?
+    t/offset-date-time?
+    t/zoned-date-time?)
+   x))
