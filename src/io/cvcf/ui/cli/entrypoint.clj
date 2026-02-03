@@ -5,6 +5,7 @@
    [io.cvcf.ui.cli.cmds.import :refer [commands] :rename {commands import-commands}]
    [io.cvcf.ui.cli.cmds.log :refer [commands] :rename {commands log-commands}]
    [io.cvcf.ui.cli.cmds.new :refer [commands] :rename {commands new-commands}]
+   [io.cvcf.ui.cli.cmds.report :refer [commands] :rename {commands report-commands}]
    [io.cvcf.ui.cli.core :refer [with-log]]))
 
 (def commands
@@ -12,7 +13,8 @@
    import-commands
    export-commands
    new-commands
-   log-commands))
+   log-commands
+   report-commands))
 
 (defn -main
   [& args]
